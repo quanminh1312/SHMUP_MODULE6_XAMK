@@ -1,0 +1,421 @@
+fileFormatVersion: 2
+guid: a85655f48ac87604c85265a2dfd6c4c0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 666
+        width: 255
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7044aea3b8e0f243ad9e0df0182ab69
+      internalID: -334162083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_1
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 633
+        width: 191
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600c22332705c014e818666e4aae19cc
+      internalID: 1663367742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 630
+        width: 134
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c57a5a673375746a3debc49d41c758
+      internalID: 56192122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_3
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 629
+        width: 195
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef09d2650f50a2043a9bdf69df7a00f3
+      internalID: 2022545380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_4
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 570
+        width: 72
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda5ccbf5a72a654ab26ab593da3e31f
+      internalID: -1838598533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 561
+        width: 55
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d2267fdfa5aeb4caadac0041994fbe
+      internalID: 771949821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_6
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 23
+        width: 388
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76adad800f0cbc14286ed587da2c3d45
+      internalID: -1176966588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_7
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 353
+        width: 138
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beda8736f8eafb24e91fddb94e4f9228
+      internalID: 569748482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_8
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 348
+        width: 168
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c22f8e88c84b2a46b791b6bc7c5bb2e
+      internalID: -359596499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_9
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 61
+        width: 203
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de78bad9b846c4341b16ba0e881e55c2
+      internalID: 1669496999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_10
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 59
+        width: 176
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52059d49a3bc07449474ac88b619fda
+      internalID: 1939536745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_0: -334162083
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_1: 1663367742
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_10: 1939536745
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_2: 56192122
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_3: 2022545380
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_4: -1838598533
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_5: 771949821
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_6: -1176966588
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_7: 569748482
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_8: -359596499
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_9: 1669496999
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

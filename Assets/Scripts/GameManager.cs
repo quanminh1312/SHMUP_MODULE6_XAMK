@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] craftPrefabs;   
 
     public Craft playerOneCraft = null;
+
+  public BulletManager bulletManager = null;
     private void Awake()
     {
         if (Instance != null)
@@ -19,6 +21,8 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        bulletManager = GetComponent<BulletManager>();
     }
     public void SpawnPlayer(int playerIndex, int craftType)
     {
@@ -33,10 +37,25 @@ public class GameManager : MonoBehaviour
         {
             if (!playerOneCraft) SpawnPlayer(1,0);
         }
-
-        if (Input .GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            if (playerOneCraft) playerOneCraft.Explode();
+            if (playerOneCraft && playerOneCraft.craftData.shotPower < CraftConfiguration.MAX_SHOT_POWER - 1) 
+                playerOneCraft.craftData.shotPower++;
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            if (playerOneCraft)
+                playerOneCraft.AddOption();
+        }
+        if (Input.GetKeyDown(KeyCode.RightBracket))
+        {
+            if (playerOneCraft)
+                playerOneCraft.IncreaseBeamStrenght();
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (bulletManager) bulletManager.SpawnBullet(BulletManager.BulletType.bullet1_Size1, 0, 150
+                                                        , Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0);
         }
     }
 } 
