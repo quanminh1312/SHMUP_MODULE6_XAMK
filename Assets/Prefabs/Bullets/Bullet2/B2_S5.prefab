@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 805680035273039760}
   - component: {fileID: 4234550738422852988}
   - component: {fileID: 6229135220625905574}
-  m_Layer: 8
+  - component: {fileID: -7135163016971704750}
+  m_Layer: 9
   m_Name: B2_S5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,3 +120,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35be0462659283e48990b65e8b6ef4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+--- !u!114 &-7135163016971704750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7521589310610008525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da534848c174d549868148b18222b63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  radiousOrWidth: 10
+  heigth: 30
+  box: 1
+  damagedByBullets: 1
+  damagedByBombs: 1
+  damagedByBeam: 1

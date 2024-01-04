@@ -85,7 +85,7 @@ public class BulletManager : MonoBehaviour
         }
         return -1;
     }
-    public Bullet SpawnBullet(BulletType bulletType, float x, float y, float dx, float dy, float angle)
+    public Bullet SpawnBullet(BulletType bulletType, float x, float y, float dx, float dy, float angle, float dAngle, bool homing)
     {
         int index = NextFreeBulletIndex(bulletType);
 
@@ -93,12 +93,25 @@ public class BulletManager : MonoBehaviour
 
         Bullet result = bullets[index];
         result.gameObject.SetActive(true);
-        bulletData[index] = new BulletData(x, y, dx, dy, angle, (int)bulletType, true);
+        bulletData[index] = new BulletData(x, y, dx, dy, angle,dAngle, (int)bulletType, true,homing);
         bullets[index].gameObject.transform.position = new Vector3(x, y, 0);
         return result;
     }
     private void FixedUpdate()
     {
+        if (GameManager.Instance && GameManager.Instance.playerOneCraft)
+            jobProcessor.playerPosition = GameManager.Instance.playerOneCraft.transform.position;
+        else
+            jobProcessor.playerPosition = new Vector2(-999,-999);
+
+
+
+        if (GameManager.Instance && GameManager.Instance.progressWindow)
+            jobProcessor.progressY = GameManager.Instance.progressWindow.transform.position.y;
+        else
+            jobProcessor.progressY = 0;
+
+
         ProcessBullet();
 
         for (int i = 0; i < MAX_BULLET_COUNT; i++)
@@ -116,7 +129,9 @@ public class BulletManager : MonoBehaviour
         float dy = bulletData[index].dY;
         float angle = bulletData[index].angle;
         int type = bulletData[index].type;
-        bulletData[index] = new BulletData(x, y, dx, dy, angle, type, false);
+        float dAngle = bulletData[index].dAngle;
+        bool homing = bulletData[index].homing;
+        bulletData[index] = new BulletData(x, y, dx, dy, angle,dAngle, type, false,homing);
     }
     public void ProcessBullet()
     {
@@ -126,6 +141,8 @@ public class BulletManager : MonoBehaviour
     public struct ProcessBulletJob: IJobParallelForTransform
     {
         public NativeArray<BulletData> bullets;
+        public Vector2 playerPosition;
+        public float progressY;
         public void Execute(int index, TransformAccess transform)
         {
             bool active = bullets[index].active;
@@ -136,16 +153,34 @@ public class BulletManager : MonoBehaviour
             float x = bullets[index].positionX;
             float y = bullets[index].positionY;
             int type = bullets[index].type;
+            float dAngle = bullets[index].dAngle;
+            bool homing = bullets[index].homing;
 
+            //homing    
+            if (homing && playerPosition.x < -998)
+            {
+                active = false;
+            }
+            else if (homing)
+            {
+                Vector2 velocity = new Vector2(dx, dy);
+                float speed = velocity.magnitude;
+                Vector2 toPlayer = new Vector2(playerPosition.x - x, playerPosition.y - y);
+                Vector2 newVelocity = Vector2.Lerp(velocity.normalized,toPlayer.normalized, 0.05f);
+                newVelocity.Normalize();
+                newVelocity *= speed;
+                dx = newVelocity.x;
+                dy = newVelocity.y;
+            }
             x += dx;
             y += dy;
 
             //check for out of bounds
-            if (x < -320 || x >320 || y <-180 || y >180)
+            if (x < -320 || x >320 || y-progressY <-180 || y-progressY >180)
             {
                 active = false;
             }
-            bullets[index] = new BulletData(x, y, dx, dy, angle, type, active);
+            bullets[index] = new BulletData(x, y, dx, dy, angle,dAngle, type, active,homing);
             if (active) 
             {
                 Vector3 newPosition = new Vector3(x, y, 0);

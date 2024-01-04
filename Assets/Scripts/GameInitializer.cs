@@ -11,7 +11,7 @@ public class GameInitializer : MonoBehaviour
         GamePlay
     }
     public GameMode gameMode;
-   public GameObject gameManagerPrefab = null;
+    public GameObject gameManagerPrefab = null;
     private bool menuLoaded = false;
     private void Awake()
     {

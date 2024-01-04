@@ -25,6 +25,7 @@ public class MainMenu : Menu
     public void ToGamePlayScene()
     {
         TurnOff(false);
+        //GameManager.Instance.StartGame();
         SceneManager.LoadScene("GamePlayScene");
     }
     public void ToControlSettings()

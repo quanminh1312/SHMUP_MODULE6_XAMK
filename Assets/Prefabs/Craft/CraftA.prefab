@@ -211,10 +211,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 0
+  sequence:
+    emitFrames: 
+    totalFrames: 0
   rate: 1
   speed: 10
   timer: 0
   muzzleFlash: {fileID: 876639699797526138}
+  autoFireActive: 0
+  firing: 0
+  startAngle: 0
+  endAngle: 0
+  radialNumber: 1
+  FireAtPlayer: 0
+  FireAtTarget: 0
+  target: {fileID: 0}
+  homing: 0
+  dAngle: 0
+  isPlayer: 1
 --- !u!1 &876639699797526138
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,10 +573,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 0
+  sequence:
+    emitFrames: 
+    totalFrames: 0
   rate: 1
   speed: 10
   timer: 0
   muzzleFlash: {fileID: 8744708265636616953}
+  autoFireActive: 0
+  firing: 0
+  startAngle: 0
+  endAngle: 0
+  radialNumber: 1
+  FireAtPlayer: 0
+  FireAtTarget: 0
+  target: {fileID: 0}
+  homing: 0
+  dAngle: 0
+  isPlayer: 1
 --- !u!1 &1539226768807123376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,10 +1170,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 1
+  sequence:
+    emitFrames: 
+    totalFrames: 0
   rate: 1
   speed: 10
   timer: 0
   muzzleFlash: {fileID: 7906618532809355288}
+  autoFireActive: 0
+  firing: 0
+  startAngle: 0
+  endAngle: 0
+  radialNumber: 1
+  FireAtPlayer: 0
+  FireAtTarget: 0
+  target: {fileID: 0}
+  homing: 0
+  dAngle: 0
+  isPlayer: 1
 --- !u!1 &3412112940722948125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,10 +1607,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 0
+  sequence:
+    emitFrames: 
+    totalFrames: 0
   rate: 1
   speed: 10
   timer: 0
   muzzleFlash: {fileID: 8746935993094423481}
+  autoFireActive: 0
+  firing: 0
+  startAngle: 0
+  endAngle: 0
+  radialNumber: 1
+  FireAtPlayer: 0
+  FireAtTarget: 0
+  target: {fileID: 0}
+  homing: 0
+  dAngle: 0
+  isPlayer: 1
 --- !u!1 &4382571912502534120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,10 +1843,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 1
+  sequence:
+    emitFrames: 
+    totalFrames: 0
   rate: 1
   speed: 10
   timer: 0
   muzzleFlash: {fileID: 7926465042534037045}
+  autoFireActive: 0
+  firing: 0
+  startAngle: 0
+  endAngle: 0
+  radialNumber: 1
+  FireAtPlayer: 0
+  FireAtTarget: 0
+  target: {fileID: 0}
+  homing: 0
+  dAngle: 0
+  isPlayer: 1
 --- !u!1 &4926355729568619683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,10 +1937,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 0
+  sequence:
+    emitFrames: 
+    totalFrames: 0
   rate: 1
   speed: 10
   timer: 0
   muzzleFlash: {fileID: 5008432519715479222}
+  autoFireActive: 0
+  firing: 0
+  startAngle: 0
+  endAngle: 0
+  radialNumber: 1
+  FireAtPlayer: 0
+  FireAtTarget: 0
+  target: {fileID: 0}
+  homing: 0
+  dAngle: 0
+  isPlayer: 1
 --- !u!1 &5008432519715479222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,10 +2253,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 1
+  sequence:
+    emitFrames: 
+    totalFrames: 0
   rate: 1
   speed: 10
   timer: 0
   muzzleFlash: {fileID: 6643971208233618396}
+  autoFireActive: 0
+  firing: 0
+  startAngle: 0
+  endAngle: 0
+  radialNumber: 1
+  FireAtPlayer: 0
+  FireAtTarget: 0
+  target: {fileID: 0}
+  homing: 0
+  dAngle: 0
+  isPlayer: 1
 --- !u!1 &5565311793989291103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,10 +2538,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 1
+  sequence:
+    emitFrames: 
+    totalFrames: 0
   rate: 1
   speed: 10
   timer: 0
   muzzleFlash: {fileID: 1133407343118648612}
+  autoFireActive: 0
+  firing: 0
+  startAngle: 0
+  endAngle: 0
+  radialNumber: 1
+  FireAtPlayer: 0
+  FireAtTarget: 0
+  target: {fileID: 0}
+  homing: 0
+  dAngle: 0
+  isPlayer: 1
 --- !u!1 &6103421554190223121
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,6 +2718,7 @@ GameObject:
   - component: {fileID: 1515607043921263335}
   - component: {fileID: 8080321540947252156}
   - component: {fileID: 8470881879715475626}
+  - component: {fileID: 8137679456408805209}
   m_Layer: 6
   m_Name: CraftA
   m_TagString: Untagged
@@ -2778,6 +2891,27 @@ MonoBehaviour:
   - {fileID: 7675242669769444431}
   beam: {fileID: 2663731763819798781}
   BombPrefab: {fileID: 8118052834267376584, guid: e622a8b1cc514334d8b2b9684a6bb422, type: 3}
+--- !u!65 &8137679456408805209
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6694826761253787749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.628165, y: 32.175407, z: 0.20000002}
+  m_Center: {x: 0.0000072433054, y: 1.7239326, z: 0}
 --- !u!1 &6714142349749992158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2824,10 +2958,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 1
+  sequence:
+    emitFrames: 
+    totalFrames: 0
   rate: 1
   speed: 10
   timer: 0
   muzzleFlash: {fileID: 5250801659834420697}
+  autoFireActive: 0
+  firing: 0
+  startAngle: 0
+  endAngle: 0
+  radialNumber: 1
+  FireAtPlayer: 0
+  FireAtTarget: 0
+  target: {fileID: 0}
+  homing: 0
+  dAngle: 0
+  isPlayer: 1
 --- !u!1 &6819523591106101495
 GameObject:
   m_ObjectHideFlags: 0

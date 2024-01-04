@@ -51,7 +51,7 @@ public class Craft : MonoBehaviour
         spriteRender = GetComponent<SpriteRenderer>();  
         Debug.Assert(spriteRender);
 
-        layerMask = ~LayerMask.GetMask("PlayerBullets") & ~LayerMask.GetMask("Player");
+        layerMask = ~LayerMask.GetMask("PlayerBullets") & ~LayerMask.GetMask("Player") & ~LayerMask.GetMask("GroundEnemy") ;
 
         craftData.beamCharge =(char) 100;
     }
@@ -85,17 +85,26 @@ public class Craft : MonoBehaviour
                                     , hits,Quaternion.identity,layerMask);
         if (noOfHits > 0)
         {
-            if (!invunerable)
-            {
-                Explode();
-            }
+            Hit();
         }
         if (InputManager.instance && alive)
         {
             craftData.positionX += InputManager.instance.playerState[0].movement.x * config.speed;
             craftData.positionY += InputManager.instance.playerState[0].movement.y * config.speed;
+
+            if (craftData.positionX<-146) craftData.positionX = -146;
+            if (craftData.positionX>146) craftData.positionX = 146;
+
+            if (craftData.positionY < -180) craftData.positionY = -180;
+            if (craftData.positionY > 180) craftData.positionY = 180;
+
             newPosition.x = (int) craftData.positionX;
-            newPosition.y = (int) craftData.positionY;
+            if (!GameManager.Instance.progressWindow)
+                GameManager.Instance.progressWindow = FindObjectOfType<LevelProgress>();
+            if (GameManager.Instance.progressWindow)
+                newPosition.y = (int)craftData.positionY + GameManager.Instance.progressWindow.transform.position.y;
+            else
+                newPosition.y = (int)craftData.positionY;
             gameObject.transform.position = newPosition;
             CheckUp();
             if (InputManager.instance.playerState[0].left)
@@ -146,6 +155,13 @@ public class Craft : MonoBehaviour
             {
                 FireBomb();
             }
+        }
+    }
+    public void Hit()
+    {
+        if (!invunerable)
+        {
+            Explode();
         }
     }
     void FireBomb()

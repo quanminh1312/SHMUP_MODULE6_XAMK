@@ -17,9 +17,11 @@ public struct BulletData
     public float dX;
     public float dY;
     public float angle;
+    public float dAngle;    
     public int type;
     public bool active;
-    public BulletData( float intX, float intY, float dX, float dY, float angle, int type, bool active)
+    public bool homing;
+    public BulletData( float intX, float intY, float dX, float dY, float angle,float dAngle, int type, bool active, bool homing)
     {
         this.positionX = intX;
         this.positionY = intY;
@@ -28,5 +30,7 @@ public struct BulletData
         this.angle = angle;
         this.type = type;
         this.active = active;
+        this.homing = homing;
+        this.dAngle = dAngle;
     }
 }

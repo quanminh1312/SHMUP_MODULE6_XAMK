@@ -21,15 +21,14 @@ public class Beam : MonoBehaviour
             craft.craftData.beamFiring = true;
             craft.craftData.beamTimer = craft.craftData.beamCharge;
             UpdateBeam();
-            float scale = beamWidth/30f;
-            beamFlash.transform.localScale = new Vector3(scale, scale, 1);
             gameObject.SetActive(true);
             beamFlash.SetActive(true);
         }
     }
     private void FixedUpdate()
     {
-        UpdateBeam();   
+        if (craft.craftData.beamFiring)
+            UpdateBeam();   
     }
     void HideHits()
     {
@@ -50,13 +49,20 @@ public class Beam : MonoBehaviour
         }
         else
         {
+            float scale = beamWidth / 30f;
+            beamFlash.transform.localScale = new Vector3(scale, scale, 1);
+
+            float topY = 180;
+            if (GameManager.Instance && GameManager.Instance.progressWindow)
+                topY += GameManager.Instance.progressWindow.data.positionY;
+
             int maxColliders = 20;
             Collider[] hits = new Collider[maxColliders];
-            Vector2 halfSize = new Vector2(beamWidth * 0.5f, (180 - craft.transform.position.y) * 0.5f);
-            float midlleY = (craft.transform.position.y + 180) * 0.5f;
+            Vector2 halfSize = new Vector2(beamWidth * 0.5f, (topY - craft.transform.position.y) * 0.5f);
+            float midlleY = (craft.transform.position.y + topY) * 0.5f;
             Vector3 center = new Vector3(craft.transform.position.x, midlleY, 0);
             int noOfHits = Physics.OverlapBoxNonAlloc(center, halfSize, hits, Quaternion.identity, layerMask);
-            float lowest = 180;
+            float lowest = topY;
             Shootable lowestShootable = null;
             Collider lowestCollider = null;
             if (noOfHits > 0)
@@ -64,16 +70,20 @@ public class Beam : MonoBehaviour
                 //find lowest hit
                 for (int h = 0; h < noOfHits; h++)
                 {
-                    RaycastHit hitInfo;
-                    Ray ray = new Ray(craft.transform.position, Vector3.up);
-                    float heigth = 180 - craft.transform.position.y;
-                    if (hits[h].Raycast(ray, out hitInfo, heigth))
+                    Shootable shootable = hits[h].GetComponent<Shootable>();
+                    if (shootable && shootable.damagedByBeam)
                     {
-                        if (hitInfo.point.y < lowest)
+                        RaycastHit hitInfo;
+                        Ray ray = new Ray(craft.transform.position, Vector3.up);
+                        float heigth = topY - craft.transform.position.y;
+                        if (hits[h].Raycast(ray, out hitInfo, heigth))
                         {
-                            lowest = hitInfo.point.y;
-                            lowestShootable = hits[h].GetComponent<Shootable>();
-                            lowestCollider = hits[h];
+                            if (hitInfo.point.y < lowest)
+                            {
+                                lowest = hitInfo.point.y;
+                                lowestShootable = hits[h].GetComponent<Shootable>();
+                                lowestCollider = hits[h];
+                            }
                         }
                     }
                 }
