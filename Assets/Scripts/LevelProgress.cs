@@ -8,6 +8,7 @@ public class LevelProgress : MonoBehaviour
     public ProgressData data;
     public int levelSize;
     public AnimationCurve speedCurve = new AnimationCurve();
+    public GameObject background = null;
 
     public GameObject midGroundTitleGrid;
     public float midGroundRate = 0.75f;
@@ -46,7 +47,10 @@ public class LevelProgress : MonoBehaviour
         data.positionX = shipX/10f;
         data.positionY += movement;
         transform.position = new Vector3(data.positionX, data.positionY, transform.position.z);
-        midGroundTitleGrid.transform.position = new Vector3(0, data.positionY * midGroundRate,0);
+        float z = background.transform.position.z;
+        background.transform.position = new Vector3(data.positionX, data.positionY, z);
+        if (midGroundTitleGrid)
+            midGroundTitleGrid.transform.position = new Vector3(0, data.positionY * midGroundRate,0);
     }
 }
 

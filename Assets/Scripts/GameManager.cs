@@ -74,6 +74,6 @@ public class GameManager : MonoBehaviour
     }
     public void StartGame()
     {
-        //UnityEngine.SceneManagement.SceneManager.LoadScene("Stage01");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Stage01");
     }
 } 

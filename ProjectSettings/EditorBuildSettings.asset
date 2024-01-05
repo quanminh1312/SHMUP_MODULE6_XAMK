@@ -29,5 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/OptionsMenu.unity
     guid: a1e65375572ae0e41bd31d553ff775b0
+  - enabled: 1
+    path: Assets/Scenes/Stages/Stage01.unity
+    guid: f5970b90b51449f4a8f333f1d2b6b1ff
   m_configObjects: {}
-  m_UseUCBPForAssetBundles: 0
