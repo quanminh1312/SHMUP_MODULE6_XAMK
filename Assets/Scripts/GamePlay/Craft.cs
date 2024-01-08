@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,7 @@ public class Craft : MonoBehaviour
     const int INVUNERABLELENGHT = 120;
 
     int layerMask = 1;
+    int pickUpLayer = 0;
 
     public BulletSpawner[] bulletSpawner = new BulletSpawner[5];
     public Option[] options = new Option[4] ;
@@ -51,9 +53,9 @@ public class Craft : MonoBehaviour
         spriteRender = GetComponent<SpriteRenderer>();  
         Debug.Assert(spriteRender);
 
-        layerMask = ~LayerMask.GetMask("PlayerBullets") & ~LayerMask.GetMask("Player") & ~LayerMask.GetMask("GroundEnemy") ;
-
-        craftData.beamCharge =(char) 100;
+        layerMask = ~LayerMask.GetMask("PlayerBullets") & ~LayerMask.GetMask("Player") 
+                  & ~LayerMask.GetMask("GroundEnemy");
+        pickUpLayer = LayerMask.NameToLayer("PickUp");
     }
     public void SetInvunerable()
     {
@@ -78,15 +80,46 @@ public class Craft : MonoBehaviour
 
         // hit detection
         int maxColliders = 10;
-        Vector2 halfSize = new Vector2(15f,20f);
         Collider[] hits = new Collider[maxColliders];
+
+
+        //bullet hits
+        Vector2 halfSize = new Vector2(3f, 4f);
         int noOfHits = Physics.OverlapBoxNonAlloc(transform.position
                                     , halfSize
                                     , hits,Quaternion.identity,layerMask);
         if (noOfHits > 0)
         {
-            Hit();
+            foreach (Collider hit in hits)
+            {
+                if (hit)
+                {
+                    if (hit.gameObject.layer != pickUpLayer) Hit();
+                }
+            }
         }
+
+
+        // pickups and Bullet Grazing
+        halfSize = new Vector2(15f, 20f);
+        noOfHits = Physics.OverlapBoxNonAlloc(transform.position
+                                    , halfSize
+                                    , hits, Quaternion.identity, layerMask);
+        if (noOfHits > 0)
+        {
+            foreach (Collider hit in hits)
+            {
+                if (hit)
+                {
+                    if (hit.gameObject.layer == pickUpLayer) PickUp(hit.GetComponent<PickUp>());
+                    else //bullet grazing
+                        craftData.beamCharge++;
+                }
+            }
+        }
+
+
+        //movement
         if (InputManager.instance && alive)
         {
             craftData.positionX += InputManager.instance.playerState[0].movement.x * config.speed;
@@ -157,6 +190,19 @@ public class Craft : MonoBehaviour
             }
         }
     }
+    public void PickUp(PickUp pickUp)
+    {
+        if (pickUp)
+        {
+            pickUp.ProcessPickUp(playerIndex, craftData);
+        }
+    }
+    public void PowerUp(int powerLevel)
+    {
+        craftData.shotPower += powerLevel;
+        if (craftData.shotPower > CraftConfiguration.MAX_SHOT_POWER - 1)
+            craftData.shotPower = CraftConfiguration.MAX_SHOT_POWER - 1;
+    }
     public void Hit()
     {
         if (!invunerable)
@@ -166,9 +212,13 @@ public class Craft : MonoBehaviour
     }
     void FireBomb()
     {
-        Vector3 pos = transform.position;
-        pos.y += 100;
-        Instantiate(BombPrefab, pos, Quaternion.identity);
+        if (craftData.smallBombs >0)
+        {
+            craftData.smallBombs--;
+            Vector3 pos = transform.position;
+            pos.y += 100;
+            Instantiate(BombPrefab, pos, Quaternion.identity);
+        }
     }
     private void CheckUp()
     {
@@ -213,7 +263,7 @@ public class Craft : MonoBehaviour
         
         EffectSystem.instance.CraftExplosion(transform.position);
         Destroy(gameObject);
-        GameManager.Instance.playerOneCraft = null;
+        GameManager.Instance.playerCrafts[0] = null;//error
 
         yield return null;
     }
@@ -260,12 +310,33 @@ public class Craft : MonoBehaviour
             UpdateBeam();
         }
     }
+    public void AddBomb(int power)
+    {
+        if (power == 1)
+            craftData.smallBombs++;
+        else if (power == 2)
+            craftData.largeBombs++;
+        else
+            Debug.LogError("Invalid bomb power pickup");
+    }
+    public void OneUp()
+    {
+        GameManager.Instance.playerDatas[playerIndex].lives++;
+    }
+    public void AddMedal(int value, int level)
+    {
+        InceaseScore(value);
+    }
     void UpdateBeam()
     {
         beam.beamWidth = (craftData.beamPower + 2) * 8f;
     }
+    public void InceaseScore(int score)
+    {
+        GameManager.Instance.playerDatas[playerIndex].score += score;
+    }
 }
-
+[Serializable]
 public class CraftData
 {
     public float positionX;
@@ -274,10 +345,13 @@ public class CraftData
     public int shotPower;
 
     public int noOfEnableOptions;
-    public char optionsLayout;
+    public int optionsLayout;
 
     public bool beamFiring;
-    public char beamPower; //power of beam abnd width
-    public char beamCharge; // max charge(upgradeable)
-    public char beamTimer; //current charge
+    public int beamPower; //power of beam abnd width
+    public int beamCharge; // picked by charge
+    public int beamTimer; //current charge
+
+    public int smallBombs;
+    public int largeBombs;
 }

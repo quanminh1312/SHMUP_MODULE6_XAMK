@@ -19,7 +19,7 @@ public class Shootable : MonoBehaviour
     public bool damagedByBeam = true;
     private void Start()
     {
-        layerMask = ~LayerMask.GetMask("Enemy") & ~LayerMask.GetMask("EnemyBullets");
+        layerMask = ~LayerMask.GetMask("Enemy") & ~LayerMask.GetMask("EnemyBullets") & ~LayerMask.GetMask("GroundEnemy") ;
         halfExtent = new Vector3(radiousOrWidth/2, heigth/2,0);
     }
     private void FixedUpdate()

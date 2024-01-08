@@ -37,7 +37,7 @@ public class LevelProgress : MonoBehaviour
             data.progress++;
 
             if (playerOneCraft==null)
-                playerOneCraft = GameManager.Instance.playerOneCraft;
+                playerOneCraft = GameManager.Instance.playerCrafts[0];//error
             if (playerOneCraft)
                 UpdateProgressWindow(playerOneCraft.craftData.positionX,movement);
         }

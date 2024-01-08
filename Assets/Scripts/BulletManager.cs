@@ -99,8 +99,8 @@ public class BulletManager : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (GameManager.Instance && GameManager.Instance.playerOneCraft)
-            jobProcessor.playerPosition = GameManager.Instance.playerOneCraft.transform.position;
+        if (GameManager.Instance && GameManager.Instance.playerCrafts[0])//error
+            jobProcessor.playerPosition = GameManager.Instance.playerCrafts[0].transform.position;//error
         else
             jobProcessor.playerPosition = new Vector2(-999,-999);
 

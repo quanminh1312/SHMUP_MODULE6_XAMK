@@ -2852,6 +2852,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa7c7804c951594db410dd7270d5434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftData:
+    positionX: 0
+    positionY: 0
+    shotPower: 0
+    noOfEnableOptions: 0
+    optionsLayout: 105
+    beamFiring: 0
+    beamPower: 49
+    beamCharge: 83
+    beamTimer: 107
+    smallBombs: 3
+    largeBombs: 3
   flame1: {fileID: 3474539834633692555}
   flame2: {fileID: 8233503018521525025}
   miniflame1: {fileID: 8984446745087222522}

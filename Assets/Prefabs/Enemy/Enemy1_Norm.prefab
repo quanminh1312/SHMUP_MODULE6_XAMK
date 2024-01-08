@@ -239,16 +239,16 @@ MonoBehaviour:
   bulletType: 5
   sequence:
     emitFrames: 000000000200000004000000
-    totalFrames: 10
-  rate: 30
-  speed: 5
+    totalFrames: 60
+  rate: 60
+  speed: 3
   timer: 0
   muzzleFlash: {fileID: 0}
   autoFireActive: 0
   firing: 0
-  startAngle: -45
-  endAngle: 45
-  radialNumber: 3
+  startAngle: 0
+  endAngle: 0
+  radialNumber: 1
   FireAtPlayer: 0
   FireAtTarget: 0
   target: {fileID: 0}

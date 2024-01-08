@@ -10,6 +10,7 @@ public class Beam : MonoBehaviour
     private int layerMask = 0;
     public GameObject beamFlash = null;
     public GameObject[] beamHits = new GameObject[5];
+    const int MINIMUM_CHARGE = 10;
     private void Start()
     {
         layerMask = ~LayerMask.GetMask("Player") & ~LayerMask.GetMask("PlayerBullets");
@@ -18,8 +19,14 @@ public class Beam : MonoBehaviour
     {
         if (!craft.craftData.beamFiring)
         {
+            if (craft.craftData.beamCharge < MINIMUM_CHARGE)
+            {
+                UpdateBeam();
+                return;
+            }
             craft.craftData.beamFiring = true;
             craft.craftData.beamTimer = craft.craftData.beamCharge;
+            craft.craftData.beamCharge = 0;
             UpdateBeam();
             gameObject.SetActive(true);
             beamFlash.SetActive(true);
@@ -39,7 +46,7 @@ public class Beam : MonoBehaviour
     }
     private void UpdateBeam()
     {
-        craft.craftData.beamTimer--;
+        if (craft.craftData.beamTimer > 0 )craft.craftData.beamTimer--;
         if (craft.craftData.beamTimer <= 0)
         {
             craft.craftData.beamFiring = false;

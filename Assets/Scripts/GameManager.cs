@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     public bool twoPlayer = false;
     public GameObject[] craftPrefabs;   
 
-    public Craft playerOneCraft = null;
+    //public Craft playerOneCraft = null;
+    public Craft[] playerCrafts = new Craft[2];
+    public PlayerData[] playerDatas = new PlayerData[2];
 
     public BulletManager bulletManager = null;
     
@@ -32,34 +34,36 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = 60;
+        playerDatas[0] = new PlayerData();
+        playerDatas[1] = new PlayerData();
     }
     public void SpawnPlayer(int playerIndex, int craftType)
     {
         Debug.Assert(craftType<craftPrefabs.Length);
         Debug.Log("Spawning player " + playerIndex);
-        playerOneCraft = Instantiate(craftPrefabs[craftType]).GetComponent<Craft>();
-        playerOneCraft.playerIndex = playerIndex;
+        playerCrafts[playerIndex] = Instantiate(craftPrefabs[craftType]).GetComponent<Craft>();
+        playerCrafts[playerIndex].playerIndex = playerIndex;
     }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (!playerOneCraft) SpawnPlayer(1,0);
+            if (!playerCrafts[0]) SpawnPlayer(1,0);
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (playerOneCraft && playerOneCraft.craftData.shotPower < CraftConfiguration.MAX_SHOT_POWER - 1) 
-                playerOneCraft.craftData.shotPower++;
+            if (playerCrafts[0] && playerCrafts[0].craftData.shotPower < CraftConfiguration.MAX_SHOT_POWER - 1)
+                playerCrafts[0].craftData.shotPower++;
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            if (playerOneCraft)
-                playerOneCraft.AddOption();
+            if (playerCrafts[0])
+                playerCrafts[0].AddOption();
         }
         if (Input.GetKeyDown(KeyCode.RightBracket))
         {
-            if (playerOneCraft)
-                playerOneCraft.IncreaseBeamStrenght();
+            if (playerCrafts[0])
+                playerCrafts[0].IncreaseBeamStrenght();
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -71,6 +75,10 @@ public class GameManager : MonoBehaviour
             if (bulletManager) bulletManager.SpawnBullet(BulletManager.BulletType.bullet1_Size1, 0, 150
                                                         , Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0,0,false);
         }
+    }
+    public void PickUpFallOffScreen(PickUp pickUp)
+    {
+        Debug.Log("PickUp fell off screen");
     }
     public void StartGame()
     {
