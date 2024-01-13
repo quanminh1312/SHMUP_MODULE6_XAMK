@@ -225,14 +225,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   steps:
-  - movement: 2
+  - rotate: 3
+    endAngle: 0
+    angleSpeed: 1
+    noOfSpins: 1
+    movement: 2
     direction: {x: 0, y: -100}
+    spline:
+      controlPoints:
+      - {x: 0, y: 0}
+      - {x: 0, y: -20}
+      - {x: 20, y: -20}
+      - {x: 20, y: -40}
+      isClosed: 0
+      linearPoints:
+      - {x: 0, y: 0}
+      - {x: 0.3272318, y: -3.9816682}
+      - {x: 1.2584023, y: -7.8645782}
+      - {x: 2.9318986, y: -11.488572}
+      - {x: 5.1838045, y: -14.786707}
+      - {x: 7.8242435, y: -17.789082}
+      - {x: 10.634401, y: -20.635574}
+      - {x: 13.393014, y: -23.531351}
+      - {x: 15.887773, y: -26.653055}
+      - {x: 17.904339, y: -30.098509}
+      - {x: 19.250492, y: -33.857834}
+      - {x: 19.88225, y: -37.799168}
     movementSpeed: 2
     framesToWait: 0
     activateStates: []
     deActivateStates: []
-  - movement: 1
+  - rotate: 3
+    endAngle: 0
+    angleSpeed: 1
+    noOfSpins: 1
+    movement: 1
     direction: {x: 0, y: 0}
+    spline:
+      controlPoints:
+      - {x: 0, y: 0}
+      - {x: 0, y: -20}
+      - {x: 20, y: -20}
+      - {x: 20, y: -40}
+      isClosed: 0
+      linearPoints:
+      - {x: 0, y: 0}
+      - {x: 0.3272318, y: -3.9816682}
+      - {x: 1.2584023, y: -7.8645782}
+      - {x: 2.9318986, y: -11.488572}
+      - {x: 5.1838045, y: -14.786707}
+      - {x: 7.8242435, y: -17.789082}
+      - {x: 10.634401, y: -20.635574}
+      - {x: 13.393014, y: -23.531351}
+      - {x: 15.887773, y: -26.653055}
+      - {x: 17.904339, y: -30.098509}
+      - {x: 19.250492, y: -33.857834}
+      - {x: 19.88225, y: -37.799168}
     movementSpeed: 2
     framesToWait: 60
     activateStates:
@@ -246,6 +294,14 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 0
   spawnOnInsane: 0
+  lasPosition: {x: 0, y: 0, z: 0}
+  currentPosition: {x: 0, y: 0, z: 0}
+  lastAngle:
+    value:
+      x: 0
+      y: 0
+      z: 0
+      w: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +370,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 6f39365902797494d8e9e7e4393619b6, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 0
   m_HDR: 1

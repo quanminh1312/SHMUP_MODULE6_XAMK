@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
 
     public Session gameSession = new Session();
 
+    public PickUp[] cyclicDrops = new PickUp[15];
+    public PickUp[] Medals = new PickUp[10];
+    private int currentDropIndex = 0;
+    private int currentMedalIndex = 0;
     private void Awake()
     {
         if (Instance != null)
@@ -48,7 +52,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (!playerCrafts[0]) SpawnPlayer(1,0);
+            if (!playerCrafts[0]) SpawnPlayer(0,0);
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -73,12 +77,31 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             if (bulletManager) bulletManager.SpawnBullet(BulletManager.BulletType.bullet1_Size1, 0, 150
-                                                        , Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0,0,false);
+                                                        , Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0,0,false,0);
         }
     }
     public void PickUpFallOffScreen(PickUp pickUp)
     {
-        Debug.Log("PickUp fell off screen");
+        if (pickUp.config.type == PickUp.PickUpType.Medal)
+        {
+            currentMedalIndex = 0;
+        }
+    }
+    public PickUp GetNextDrop()
+    {
+        PickUp result = cyclicDrops[currentDropIndex];
+
+        if (result.config.type == PickUp.PickUpType.Medal)
+        {
+            result = Medals[currentMedalIndex];
+            currentMedalIndex++;
+            if (currentMedalIndex > 9) currentMedalIndex = 0;
+        }
+
+
+        currentDropIndex++;
+        if (currentDropIndex > 14) currentDropIndex = 0;
+        return result;
     }
     public void StartGame()
     {

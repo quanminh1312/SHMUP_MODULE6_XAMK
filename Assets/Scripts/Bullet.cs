@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int index;
+    public int index; // index in the bullet pool
+    public byte playerIndex; // player that shot the bullet
 }
 
 

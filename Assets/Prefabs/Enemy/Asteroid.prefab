@@ -119,3 +119,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da534848c174d549868148b18222b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
+  radiousOrWidth: 10
+  heigth: 10
+  box: 0
+  damagedByBullets: 1
+  damagedByBombs: 1
+  damagedByBeam: 1
+  spawnCyclicPickUp: 1
+  spawnSpecificPickUp: []

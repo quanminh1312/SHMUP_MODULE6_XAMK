@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameInitializer : MonoBehaviour
 {
@@ -13,6 +13,7 @@ public class GameInitializer : MonoBehaviour
     public GameMode gameMode;
     public GameObject gameManagerPrefab = null;
     private bool menuLoaded = false;
+    private Scene displayScrene;
     private void Awake()
     {
         if (GameManager.Instance == null) 
@@ -20,6 +21,7 @@ public class GameInitializer : MonoBehaviour
             if (gameManagerPrefab)
             {
                 Instantiate(gameManagerPrefab);
+                displayScrene = SceneManager.GetSceneByName("DisplayScene");
             }
             else
                 Debug.Log("no gamemanagerprefab");
@@ -29,6 +31,10 @@ public class GameInitializer : MonoBehaviour
     {
         if (!menuLoaded) 
         {
+            if (!displayScrene.isLoaded)
+            {
+                SceneManager.LoadScene("DisplayScene", LoadSceneMode.Additive);
+            }
             switch (gameMode)
             {
                 case GameMode.Menus:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab647e44d2a2de46a8646a112bb3ecc, type: 3}
   m_Name: CraftA_config
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   bulletStrength: 1
   beamStrength: 1
   craftSprite: {fileID: 1845613065, guid: c87878188a9da834aacaff3cae56011a, type: 3}

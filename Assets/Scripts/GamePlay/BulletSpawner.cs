@@ -30,12 +30,13 @@ public class BulletSpawner : MonoBehaviour
     public bool homing = false;
     public float dAngle = 0;
 
-    public bool isPlayer = false;
+    //public bool isPlayer = false;
+    public int playerIndex = 2; // >1 = enemy, 0 = player 1, 1 = player 2
     public void shoot(int size)
     {
         if (size < 0) return;
 
-        if (!isPlayer)
+        if (playerIndex==2)
         {
             float x = transform.position.x;
             if (GameManager.Instance && GameManager.Instance.progressWindow)
@@ -76,7 +77,7 @@ public class BulletSpawner : MonoBehaviour
                                                     transform.position.y,
                                                     velocity.x,
                                                     velocity.y,
-                                                    angle,dAngle,homing);
+                                                    angle,dAngle,homing,(byte)playerIndex);
                 angle = angle + ((endAngle - startAngle) / (radialNumber - 1));
             }
             if (muzzleFlash)

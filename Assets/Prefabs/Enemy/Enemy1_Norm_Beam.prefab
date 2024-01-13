@@ -536,6 +536,8 @@ MonoBehaviour:
   damagedByBullets: 1
   damagedByBombs: 1
   damagedByBeam: 1
+  spawnCyclicPickUp: 1
+  spawnSpecificPickUp: []
 --- !u!1 &8848465776594625450
 GameObject:
   m_ObjectHideFlags: 0

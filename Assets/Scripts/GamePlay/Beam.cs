@@ -7,6 +7,7 @@ public class Beam : MonoBehaviour
     public LineRenderer lineRenderer = null;
     public float beamWidth = 20f;
     public Craft craft = null;
+    public int playerIndex = 2;
     private int layerMask = 0;
     public GameObject beamFlash = null;
     public GameObject[] beamHits = new GameObject[5];
@@ -46,7 +47,7 @@ public class Beam : MonoBehaviour
     }
     private void UpdateBeam()
     {
-        if (craft.craftData.beamTimer > 0 )craft.craftData.beamTimer--;
+        if (craft.craftData.beamTimer > 0 ) craft.craftData.beamTimer--;
         if (craft.craftData.beamTimer <= 0)
         {
             craft.craftData.beamFiring = false;
@@ -112,7 +113,7 @@ public class Beam : MonoBehaviour
                             pos.y += Random.Range(-3f, 3f);
                             beamHits[h].transform.position = pos;
                             beamHits[h].gameObject.SetActive(true);
-                            lowestShootable.takeDamage(craft.craftData.beamPower + 1);
+                            lowestShootable.takeDamage(craft.craftData.beamPower + 1,playerIndex);
                         }
                         else
                         {

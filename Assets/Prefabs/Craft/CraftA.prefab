@@ -228,7 +228,7 @@ MonoBehaviour:
   target: {fileID: 0}
   homing: 0
   dAngle: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &876639699797526138
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +590,7 @@ MonoBehaviour:
   target: {fileID: 0}
   homing: 0
   dAngle: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &1539226768807123376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,7 +1187,7 @@ MonoBehaviour:
   target: {fileID: 0}
   homing: 0
   dAngle: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &3412112940722948125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,7 +1624,7 @@ MonoBehaviour:
   target: {fileID: 0}
   homing: 0
   dAngle: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &4382571912502534120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,7 +1860,7 @@ MonoBehaviour:
   target: {fileID: 0}
   homing: 0
   dAngle: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &4926355729568619683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,7 +1954,7 @@ MonoBehaviour:
   target: {fileID: 0}
   homing: 0
   dAngle: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &5008432519715479222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,7 +2270,7 @@ MonoBehaviour:
   target: {fileID: 0}
   homing: 0
   dAngle: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &5565311793989291103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2555,7 +2555,7 @@ MonoBehaviour:
   target: {fileID: 0}
   homing: 0
   dAngle: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &6103421554190223121
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,13 +2857,13 @@ MonoBehaviour:
     positionY: 0
     shotPower: 0
     noOfEnableOptions: 0
-    optionsLayout: 105
+    optionsLayout: 4
     beamFiring: 0
-    beamPower: 49
-    beamCharge: 83
-    beamTimer: 107
-    smallBombs: 3
-    largeBombs: 3
+    beamPower: 0
+    beamCharge: 0
+    beamTimer: 0
+    smallBombs: 1
+    largeBombs: 1
   flame1: {fileID: 3474539834633692555}
   flame2: {fileID: 8233503018521525025}
   miniflame1: {fileID: 8984446745087222522}
@@ -2987,7 +2987,7 @@ MonoBehaviour:
   target: {fileID: 0}
   homing: 0
   dAngle: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &6819523591106101495
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,6 +3233,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 1570370154772597570}
   beamWidth: 20
   craft: {fileID: 8470881879715475626}
+  playerIndex: 0
   beamFlash: {fileID: 8886857213876280649}
   beamHits:
   - {fileID: 2410395766107215615}

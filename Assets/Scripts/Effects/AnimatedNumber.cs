@@ -11,9 +11,9 @@ public class AnimatedNumber : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        updateNumber(numberToDisplay);
+        UpdateNumber(numberToDisplay);
     }
-    void updateNumber(int newNumberToDisplay)
+    public void UpdateNumber(int newNumberToDisplay)
     {
         numberToDisplay = newNumberToDisplay;
         string numbers = numberToDisplay.ToString();

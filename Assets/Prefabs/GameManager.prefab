@@ -51,7 +51,47 @@ MonoBehaviour:
   twoPlayer: 0
   craftPrefabs:
   - {fileID: 6694826761253787749, guid: e4a12a3254a33c841af97c80cf763827, type: 3}
-  playerOneCraft: {fileID: 0}
+  playerCrafts:
+  - {fileID: 0}
+  - {fileID: 0}
+  playerDatas:
+  - score: 0
+    lives: 3
+  - score: 0
+    lives: 3
+  bulletManager: {fileID: 0}
+  progressWindow: {fileID: 0}
+  gameSession:
+    hardness: 1
+    stage: 1
+    practice: 0
+    arenaPractice: 0
+    stagePractice: 0
+    infiniteLives: 0
+    infiniteContinues: 0
+    infiniteBombs: 0
+    invincible: 0
+    halfspeed: 0
+    doublespeed: 0
+  cyclicDrops:
+  - {fileID: 3657506218114499410, guid: b7562ee3f8899654d98d9048f7c0ad16, type: 3}
+  - {fileID: 1497781141424213329, guid: ca7c7304f3ac07640b2785bcb2d26f19, type: 3}
+  - {fileID: 8024649079353575713, guid: 22f236591266e344d8189942e9b23eb0, type: 3}
+  - {fileID: 1497781141424213329, guid: ca7c7304f3ac07640b2785bcb2d26f19, type: 3}
+  - {fileID: 5574723879781973348, guid: 17f013643370e4845bcba5b7d66befd9, type: 3}
+  - {fileID: 3657506218114499410, guid: b7562ee3f8899654d98d9048f7c0ad16, type: 3}
+  - {fileID: 2739360406476138822, guid: 429d2f77e0f1ea342ae72d42001051ec, type: 3}
+  - {fileID: 1497781141424213329, guid: ca7c7304f3ac07640b2785bcb2d26f19, type: 3}
+  - {fileID: 9196404267337282465, guid: 5fa912c691496a941b55a88a8700bf8f, type: 3}
+  - {fileID: 3657506218114499410, guid: b7562ee3f8899654d98d9048f7c0ad16, type: 3}
+  - {fileID: 8024649079353575713, guid: 22f236591266e344d8189942e9b23eb0, type: 3}
+  - {fileID: 2739360406476138822, guid: 429d2f77e0f1ea342ae72d42001051ec, type: 3}
+  - {fileID: 8024649079353575713, guid: 22f236591266e344d8189942e9b23eb0, type: 3}
+  - {fileID: 3657506218114499410, guid: b7562ee3f8899654d98d9048f7c0ad16, type: 3}
+  - {fileID: 5574723879781973348, guid: 17f013643370e4845bcba5b7d66befd9, type: 3}
+  Medals:
+  - {fileID: 2864290063385334750, guid: 6e2ca476864ce7d48ad8dd406d3baf4c, type: 3}
+  - {fileID: 3271516911184270581, guid: 428e7325c32c6fd428dd92ed8fc3b01d, type: 3}
 --- !u!114 &6318453079642951236
 MonoBehaviour:
   m_ObjectHideFlags: 0

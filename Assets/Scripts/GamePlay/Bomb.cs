@@ -6,4 +6,5 @@ public class Bomb : MonoBehaviour
 {
     public float radius = 50f;
     public int power = 50;
+    public int playerIndex = 2;
 }

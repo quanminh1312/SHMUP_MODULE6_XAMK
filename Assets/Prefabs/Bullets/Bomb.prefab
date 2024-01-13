@@ -156,3 +156,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 50
   power: 50
+  playerIndex: 0

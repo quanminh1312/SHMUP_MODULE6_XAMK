@@ -25,6 +25,7 @@ public class Craft : MonoBehaviour
     bool invunerable = true;
     int invunerableTimer = 120;
     const int INVUNERABLELENGHT = 120;
+    public static int MAXIMUMBEAMCHARGE = 64;
 
     int layerMask = 1;
     int pickUpLayer = 0;
@@ -64,6 +65,7 @@ public class Craft : MonoBehaviour
     }
     private void FixedUpdate()
     {
+
         if (invunerable)
         {
             if (invunerableTimer % 12 < 6)
@@ -113,7 +115,11 @@ public class Craft : MonoBehaviour
                 {
                     if (hit.gameObject.layer == pickUpLayer) PickUp(hit.GetComponent<PickUp>());
                     else //bullet grazing
+                    if (craftData.beamCharge < MAXIMUMBEAMCHARGE)
+                    {
                         craftData.beamCharge++;
+                        craftData.beamTimer++;
+                    }
                 }
             }
         }
@@ -122,14 +128,25 @@ public class Craft : MonoBehaviour
         //movement
         if (InputManager.instance && alive)
         {
+            // Chain drop
+            if (GameManager.Instance.playerDatas[playerIndex].chainTimer > 0)
+            {
+                GameManager.Instance.playerDatas[playerIndex].chainTimer--;
+                if (GameManager.Instance.playerDatas[playerIndex].chainTimer == 0)
+                {
+                    GameManager.Instance.playerDatas[playerIndex].chain = 0;
+                }
+            }
+
+            //movement
             craftData.positionX += InputManager.instance.playerState[0].movement.x * config.speed;
             craftData.positionY += InputManager.instance.playerState[0].movement.y * config.speed;
 
-            if (craftData.positionX<-146) craftData.positionX = -146;
-            if (craftData.positionX>146) craftData.positionX = 146;
+            if (craftData.positionX<-146 + halfSize.x) craftData.positionX = -146 + halfSize.x;
+            if (craftData.positionX>146 - halfSize.x) craftData.positionX = 146 - halfSize.x;
 
-            if (craftData.positionY < -180) craftData.positionY = -180;
-            if (craftData.positionY > 180) craftData.positionY = 180;
+            if (craftData.positionY < -180 + halfSize.y) craftData.positionY = -180 + halfSize.y;
+            if (craftData.positionY > 180 - halfSize.y) craftData.positionY = 180 - halfSize.y;
 
             newPosition.x = (int) craftData.positionX;
             if (!GameManager.Instance.progressWindow)
@@ -217,7 +234,8 @@ public class Craft : MonoBehaviour
             craftData.smallBombs--;
             Vector3 pos = transform.position;
             pos.y += 100;
-            Instantiate(BombPrefab, pos, Quaternion.identity);
+            Bomb bomb = Instantiate(BombPrefab, pos, Quaternion.identity).GetComponent<Bomb>();
+            if (bomb) bomb.playerIndex = playerIndex;
         }
     }
     private void CheckUp()
@@ -334,6 +352,7 @@ public class Craft : MonoBehaviour
     public void InceaseScore(int score)
     {
         GameManager.Instance.playerDatas[playerIndex].score += score;
+        GameManager.Instance.playerDatas[playerIndex].stageScore += score;
     }
 }
 [Serializable]

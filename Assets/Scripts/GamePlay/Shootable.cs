@@ -17,6 +17,9 @@ public class Shootable : MonoBehaviour
     public bool damagedByBullets = true;
     public bool damagedByBombs = true;
     public bool damagedByBeam = true;
+
+    public bool spawnCyclicPickUp = false;
+    public PickUp[] spawnSpecificPickUp;
     private void Start()
     {
         layerMask = ~LayerMask.GetMask("Enemy") & ~LayerMask.GetMask("EnemyBullets") & ~LayerMask.GetMask("GroundEnemy") ;
@@ -40,7 +43,7 @@ public class Shootable : MonoBehaviour
                     Bullet b = hits[h].GetComponent<Bullet>();
                     if (b != null)
                     {
-                        takeDamage(1);
+                        takeDamage(1,b.playerIndex);
                         GameManager.Instance.bulletManager.DeActivateBullet(b.index);
                     }
                 }
@@ -49,17 +52,41 @@ public class Shootable : MonoBehaviour
                     Bomb bomb = hits[h].GetComponent<Bomb>();
                     if (bomb != null)
                     {
-                        takeDamage(bomb.power);
+                        takeDamage(bomb.power,bomb.playerIndex);
                     }
                 }
             }
         }
     }
-    public void takeDamage(int damage)
+    public void takeDamage(int damage, int fromPlayer)
     {
         health -= damage;
         if (health <= 0)
         {
+            if (fromPlayer<2)
+            {
+                GameManager.Instance.playerDatas[fromPlayer].chain++;
+                GameManager.Instance.playerDatas[fromPlayer].chainTimer = PlayerData.MAX_CHAIN;
+            }
+            Vector2 pos = transform.position;
+            if (spawnCyclicPickUp)
+            {
+                PickUp spawn = GameManager.Instance.GetNextDrop();
+                PickUp p = Instantiate(spawn, pos, Quaternion.identity);
+                if (p)
+                {
+                    p.transform.SetParent(GameManager.Instance.transform);
+                }
+            }
+            foreach (PickUp p in spawnSpecificPickUp)
+            {
+                PickUp pickUp = Instantiate(p, pos, Quaternion.identity);
+                if (pickUp)
+                {
+                    pickUp.transform.SetParent(GameManager.Instance.transform);
+                }
+            }
+
             Destroy(gameObject);
         }
     }

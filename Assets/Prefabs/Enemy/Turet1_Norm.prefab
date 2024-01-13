@@ -149,9 +149,9 @@ MonoBehaviour:
   bulletType: 6
   sequence:
     emitFrames: 01000000
-    totalFrames: 10
+    totalFrames: 30
   rate: 30
-  speed: 3
+  speed: 2
   timer: 0
   muzzleFlash: {fileID: 0}
   autoFireActive: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   target: {fileID: 0}
   homing: 0
   dAngle: 0
-  isPlayer: 0
+  playerIndex: 2
 --- !u!1 &7028877437324124597
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +259,8 @@ MonoBehaviour:
   damagedByBullets: 1
   damagedByBombs: 1
   damagedByBeam: 1
+  spawnCyclicPickUp: 1
+  spawnSpecificPickUp: []
 --- !u!1 &8746949646097964472
 GameObject:
   m_ObjectHideFlags: 0

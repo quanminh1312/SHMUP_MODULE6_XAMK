@@ -85,13 +85,14 @@ public class BulletManager : MonoBehaviour
         }
         return -1;
     }
-    public Bullet SpawnBullet(BulletType bulletType, float x, float y, float dx, float dy, float angle, float dAngle, bool homing)
+    public Bullet SpawnBullet(BulletType bulletType, float x, float y, float dx, float dy, float angle, float dAngle, bool homing, byte playerIndex)
     {
         int index = NextFreeBulletIndex(bulletType);
 
         if (index == -1) return null;
 
         Bullet result = bullets[index];
+        result.playerIndex = playerIndex;
         result.gameObject.SetActive(true);
         bulletData[index] = new BulletData(x, y, dx, dy, angle,dAngle, (int)bulletType, true,homing);
         bullets[index].gameObject.transform.position = new Vector3(x, y, 0);
