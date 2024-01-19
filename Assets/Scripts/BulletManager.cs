@@ -158,7 +158,7 @@ public class BulletManager : MonoBehaviour
             bool homing = bullets[index].homing;
 
             //homing    
-            if (playerPosition.x < -998)
+            if (homing && playerPosition.x < -998)
             {
                 active = false;
             }

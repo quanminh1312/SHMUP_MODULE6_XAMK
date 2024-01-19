@@ -223,6 +223,10 @@ MonoBehaviour:
   - {fileID: 87163288}
   - {fileID: 1384250077}
   delays: []
+  waveBonus: 0
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  noOfEnemies: 0
 --- !u!1 &41556681
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +429,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -517,6 +522,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -769,6 +775,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -925,6 +932,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 28.75296, y: 738.6833, z: 0}
   currentPosition: {x: 28.75296, y: 738.6291, z: 0}
   lastAngle:
@@ -1111,6 +1119,7 @@ MonoBehaviour:
   spawnOnNormal: 0
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -1188,6 +1197,7 @@ MonoBehaviour:
   spawnOnNormal: 0
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 61.5, y: 292.8, z: 0}
   currentPosition: {x: 61.5, y: 292.8, z: 0}
   lastAngle:
@@ -1295,6 +1305,7 @@ MonoBehaviour:
   spawnOnNormal: 0
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -1495,6 +1506,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -1587,6 +1599,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -1679,6 +1692,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -45551,6 +45565,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -45698,6 +45713,10 @@ MonoBehaviour:
   - {fileID: 439880834}
   - {fileID: 344184896}
   delays: []
+  waveBonus: 0
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  noOfEnemies: 0
 --- !u!1001 &521504126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45906,8 +45925,84 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
+  lastAngle:
+    value:
+      x: 0
+      y: 0
+      z: 0
+      w: 1
+--- !u!1 &528714785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528714786}
+  - component: {fileID: 528714787}
+  m_Layer: 11
+  m_Name: Boss
+  m_TagString: Untagged
+  m_Icon: {fileID: 2800000, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528714786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528714785}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 225.5, y: 227, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1080071997}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &528714787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528714785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e934b565764bc42a97e35dcc06080e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steps:
+  - rotate: 1
+    endAngle: 0
+    angleSpeed: 0
+    noOfSpins: 0
+    movement: 1
+    direction: {x: 0, y: 0}
+    spline:
+      controlPoints: []
+      isClosed: 0
+      linearPoints: []
+    movementSpeed: 0.5
+    framesToWait: 0
+    activateStates: []
+    deActivateStates: []
+  enmyPrefab: {fileID: 3544612169980827040, guid: 56ce70e36333da149a8b4d4363ede65a, type: 3}
+  stayOnLast: 1
+  startActive: 0
+  spawnOnEasy: 1
+  spawnOnNormal: 1
+  spawnOnHard: 1
+  spawnOnInsane: 1
+  owingWave: {fileID: 0}
+  lasPosition: {x: -0.7470398, y: 3551.7136, z: 0}
+  currentPosition: {x: -0.7470398, y: 3551.7136, z: 0}
   lastAngle:
     value:
       x: 0
@@ -45998,6 +46093,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: -33.24704, y: 765.71375, z: 0}
   currentPosition: {x: -33.24704, y: 765.71375, z: 0}
   lastAngle:
@@ -46180,6 +46276,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -46272,6 +46369,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -46488,6 +46586,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -46752,6 +46851,10 @@ MonoBehaviour:
   - {fileID: 2080340828}
   - {fileID: 307149014}
   delays: []
+  waveBonus: 0
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  noOfEnemies: 0
 --- !u!4 &640031960
 Transform:
   m_ObjectHideFlags: 0
@@ -47145,6 +47248,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -47447,6 +47551,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -47539,6 +47644,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -47631,6 +47737,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -47753,6 +47860,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 28.75296, y: 1063.7137, z: 0}
   currentPosition: {x: 28.75296, y: 1063.7137, z: 0}
   lastAngle:
@@ -47861,6 +47969,10 @@ MonoBehaviour:
   - {fileID: 584378098}
   - {fileID: 523068892}
   delays: []
+  waveBonus: 0
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  noOfEnemies: 0
 --- !u!1 &960398891
 GameObject:
   m_ObjectHideFlags: 0
@@ -47945,6 +48057,7 @@ MonoBehaviour:
   spawnOnNormal: 0
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -48036,19 +48149,19 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.35716063
     - serializedVersion: 3
-      time: 0.9338302
-      value: 0
-      inSlope: -0.18807603
-      outSlope: -0.18807603
+      time: 0.96014524
+      value: 0.11519844
+      inSlope: -2.2611861
+      outSlope: -2.2611861
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.45480546
+      outWeight: 0.32242545
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -2.890456
+      outSlope: -2.890456
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -48237,6 +48350,7 @@ MonoBehaviour:
   spawnOnNormal: 0
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -48427,6 +48541,108 @@ MonoBehaviour:
   - {fileID: 234831588}
   - {fileID: 1871940701}
   delays: []
+  waveBonus: 0
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  noOfEnemies: 0
+--- !u!1 &1080071996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080071997}
+  - component: {fileID: 1080071999}
+  - component: {fileID: 1080071998}
+  m_Layer: 0
+  m_Name: Boss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080071997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080071996}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 62, y: 3048, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 528714786}
+  m_Father: {fileID: 1307315153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1080071998
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080071996}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 48, y: 5}
+  m_EdgeRadius: 0
+--- !u!114 &1080071999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080071996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d5d8d4d041c5746aa7a995084b521a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patterns:
+  - {fileID: 528714787}
+  delays: []
+  waveBonus: 0
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  noOfEnemies: 0
 --- !u!1 &1093318863
 GameObject:
   m_ObjectHideFlags: 0
@@ -48511,6 +48727,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -48633,6 +48850,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -48759,6 +48977,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: -33.24704, y: 1095.7137, z: 0}
   currentPosition: {x: -33.24704, y: 1095.7137, z: 0}
   lastAngle:
@@ -48978,6 +49197,7 @@ Transform:
   - {fileID: 2134959511}
   - {fileID: 2056429700}
   - {fileID: 512164561}
+  - {fileID: 1080071997}
   - {fileID: 19416893}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49065,6 +49285,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -49157,6 +49378,7 @@ MonoBehaviour:
   spawnOnNormal: 0
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -49279,6 +49501,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -49318,6 +49541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMode: 2
   gameManagerPrefab: {fileID: 2947249443713221648, guid: 5a7c615f933d31b46b21dddc2bd6f484, type: 3}
+  playMusicTrack: 0
 --- !u!4 &1396695091
 Transform:
   m_ObjectHideFlags: 0
@@ -49628,6 +49852,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: -42.572716, y: 438.07, z: 0}
   currentPosition: {x: -42.57847, y: 437.9311, z: 0}
   lastAngle:
@@ -49725,6 +49950,7 @@ MonoBehaviour:
   spawnOnNormal: 0
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -50001,6 +50227,10 @@ MonoBehaviour:
   - {fileID: 2113487436}
   - {fileID: 809207226}
   delays: []
+  waveBonus: 0
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  noOfEnemies: 0
 --- !u!4 &1496376316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9087343247770955079, guid: ca2f448aacc114d47a11a6aab93c37a1, type: 3}
@@ -50106,6 +50336,10 @@ MonoBehaviour:
   - {fileID: 1418372533}
   - {fileID: 1640577239}
   delays: []
+  waveBonus: 0
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  noOfEnemies: 0
 --- !u!1001 &1512589475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50346,6 +50580,7 @@ MonoBehaviour:
   spawnOnNormal: 0
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 34.5, y: 485.1137, z: 0}
   currentPosition: {x: 34.5, y: 485.1137, z: 0}
   lastAngle:
@@ -50438,6 +50673,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -50530,6 +50766,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 19.5, y: 418.7137, z: 0}
   currentPosition: {x: 19.5, y: 418.7137, z: 0}
   lastAngle:
@@ -50638,6 +50875,10 @@ MonoBehaviour:
   - {fileID: 1191536787}
   - {fileID: 888073355}
   delays: []
+  waveBonus: 0
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  noOfEnemies: 0
 --- !u!4 &1708393432 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 56776542432185135, guid: 0a903544877672d4b9b1df19b00ca38f, type: 3}
@@ -50727,6 +50968,7 @@ MonoBehaviour:
   spawnOnNormal: 0
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -51045,6 +51287,11 @@ MonoBehaviour:
   - {fileID: 534793656}
   - {fileID: 245283593}
   delays: []
+  waveBonus: 10000
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp:
+  - {fileID: 2739360406476138822, guid: 429d2f77e0f1ea342ae72d42001051ec, type: 3}
+  noOfEnemies: 0
 --- !u!1 &1863055812
 GameObject:
   m_ObjectHideFlags: 0
@@ -51129,6 +51376,7 @@ MonoBehaviour:
   spawnOnNormal: 0
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -51516,6 +51764,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 16.166744, y: 1364.061, z: 0}
   currentPosition: {x: 16.209194, y: 1364.1957, z: 0}
   lastAngle:
@@ -51608,6 +51857,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 47.5, y: 399.7137, z: 0}
   currentPosition: {x: 47.5, y: 399.7137, z: 0}
   lastAngle:
@@ -51782,6 +52032,7 @@ MonoBehaviour:
   spawnOnNormal: 0
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 43.75296, y: 1140.1138, z: 0}
   currentPosition: {x: 43.75296, y: 1140.1138, z: 0}
   lastAngle:
@@ -51888,9 +52139,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
+    x: 0.402
+    y: -0.058
+    width: 0.37
     height: 1
   near clip plane: 0.3
   far clip plane: 300
@@ -52061,6 +52312,10 @@ MonoBehaviour:
   - {fileID: 2106887111}
   - {fileID: 1149325710}
   delays: []
+  waveBonus: 0
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  noOfEnemies: 0
 --- !u!1 &2080340827
 GameObject:
   m_ObjectHideFlags: 0
@@ -52130,6 +52385,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 33.899994, y: 222.3, z: 0}
   currentPosition: {x: 33.899994, y: 222.3, z: 0}
   lastAngle:
@@ -52237,6 +52493,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -52329,6 +52586,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 1
   spawnOnInsane: 1
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -52599,6 +52857,10 @@ MonoBehaviour:
   - {fileID: 94155304}
   - {fileID: 595707577}
   delays: []
+  waveBonus: 0
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  noOfEnemies: 0
 --- !u!1001 &667006842241318754
 PrefabInstance:
   m_ObjectHideFlags: 0

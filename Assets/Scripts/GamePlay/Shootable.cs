@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,13 @@ public class Shootable : MonoBehaviour
     public float radiousOrWidth = 10f;
     public float heigth = 10;
     public bool box = false;
+    public bool polygon = false;
+
+    public bool remainDestroy = false;
+    private bool destroyed = false;
+    public int damageHealth = 5; //at what health is damage sprite displayed
+
+    private Collider2D polyCollider;
 
     private Vector2 halfExtent;
 
@@ -20,20 +28,45 @@ public class Shootable : MonoBehaviour
 
     public bool spawnCyclicPickUp = false;
     public PickUp[] spawnSpecificPickUp;
+
+
+    public SoundFX destroyedSound = null;
+
+    public int hitScore = 10;
+    public int destroyScore = 1000;
     private void Start()
     {
         layerMask = ~LayerMask.GetMask("Enemy") & ~LayerMask.GetMask("EnemyBullets") & ~LayerMask.GetMask("GroundEnemy") ;
-        halfExtent = new Vector3(radiousOrWidth/2, heigth/2,0);
+        if (polygon)
+        {
+            polyCollider = GetComponent<Collider2D>();
+            Debug.Assert(polyCollider);
+        }
+        else
+            halfExtent = new Vector3(radiousOrWidth/2, heigth/2,0);
     }
     private void FixedUpdate()
     {
+        if (destroyed) return;
         int maxColliders = 10;
-        Collider[] hits = new Collider[maxColliders];
+        Collider2D[] hits = new Collider2D[maxColliders];
         int noOfHits = 0;
         if (box)
-            noOfHits = Physics.OverlapBoxNonAlloc(transform.position, halfExtent, hits,transform.rotation, layerMask);
+            noOfHits = Physics2D.OverlapBoxNonAlloc(transform.position, 
+                                                    halfExtent,
+                                                    0, //transfrom.rotation,
+                                                    hits, 
+                                                    layerMask);
+        else if (polygon)
+        {
+            ContactFilter2D contactFilter = new ContactFilter2D();
+            contactFilter.useTriggers = false;
+            contactFilter.SetLayerMask(layerMask);
+            contactFilter.useLayerMask = true;
+            noOfHits = Physics2D.OverlapCollider(polyCollider, contactFilter, hits);
+        }
         else
-            noOfHits = Physics.OverlapSphereNonAlloc(transform.position, radiousOrWidth, hits, layerMask);
+            noOfHits = Physics2D.OverlapCircleNonAlloc(transform.position, radiousOrWidth, hits, layerMask);
         if (noOfHits >0)
         {
             for (int h=0;h<noOfHits;h++)
@@ -60,34 +93,50 @@ public class Shootable : MonoBehaviour
     }
     public void takeDamage(int damage, int fromPlayer)
     {
+        if (destroyed) return;
+
+        ScoreManager.instance.ShootableHit(fromPlayer, hitScore);
+        
         health -= damage;
-        if (health <= 0)
+
+        EnemyPart part = GetComponent<EnemyPart>();
+        if (health <= damageHealth && part)
+            part.Damaged(true);
+        else if (part)
+            part.Damaged(false);
+
+
+        if (health <= 0) //destroyed
         {
+            destroyed = true;
+            if (part) part.Destroyed(fromPlayer);
+
+            if (destroyedSound)
+                destroyedSound.Play();
+
             if (fromPlayer<2)
             {
+                ScoreManager.instance.ShootableDestroyed(fromPlayer, destroyScore);
                 GameManager.Instance.playerDatas[fromPlayer].chain++;
+                ScoreManager.instance.UpdateChainMultiplier(fromPlayer);
                 GameManager.Instance.playerDatas[fromPlayer].chainTimer = PlayerData.MAX_CHAIN;
             }
             Vector2 pos = transform.position;
             if (spawnCyclicPickUp)
             {
                 PickUp spawn = GameManager.Instance.GetNextDrop();
-                PickUp p = Instantiate(spawn, pos, Quaternion.identity);
-                if (p)
-                {
-                    p.transform.SetParent(GameManager.Instance.transform);
-                }
+                GameManager.Instance.SpawnPickUp(spawn, pos);
             }
             foreach (PickUp p in spawnSpecificPickUp)
             {
-                PickUp pickUp = Instantiate(p, pos, Quaternion.identity);
-                if (pickUp)
-                {
-                    pickUp.transform.SetParent(GameManager.Instance.transform);
-                }
+                GameManager.Instance.SpawnPickUp(p, pos);
             }
 
-            Destroy(gameObject);
+            if (remainDestroy)
+                destroyed = true;
+            else
+                gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
     }
 }

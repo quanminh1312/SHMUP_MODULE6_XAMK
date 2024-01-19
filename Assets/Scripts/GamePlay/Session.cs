@@ -28,4 +28,6 @@ public class Session
     public bool invincible = false;
     public bool halfspeed = false;
     public bool doublespeed = false;
+
+    public CraftData[] craftDatas = new CraftData[2];
 }

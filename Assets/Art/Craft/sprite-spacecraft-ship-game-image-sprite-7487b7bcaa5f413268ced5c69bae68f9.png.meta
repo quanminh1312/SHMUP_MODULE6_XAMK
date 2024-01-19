@@ -170,7 +170,7 @@ TextureImporter:
         width: 255
         height: 187
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
         width: 191
         height: 255
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,7 +212,7 @@ TextureImporter:
         width: 134
         height: 254
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +233,7 @@ TextureImporter:
         width: 195
         height: 255
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,7 +254,7 @@ TextureImporter:
         width: 72
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,7 +275,7 @@ TextureImporter:
         width: 55
         height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,7 +296,7 @@ TextureImporter:
         width: 388
         height: 506
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -317,7 +317,7 @@ TextureImporter:
         width: 138
         height: 148
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,7 +338,7 @@ TextureImporter:
         width: 168
         height: 187
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -359,7 +359,7 @@ TextureImporter:
         width: 203
         height: 248
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -380,7 +380,7 @@ TextureImporter:
         width: 176
         height: 257
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -388,6 +388,111 @@ TextureImporter:
       bones: []
       spriteID: c52059d49a3bc07449474ac88b619fda
       internalID: 1939536745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_11
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 494
+        width: 46
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449be48854de4c445ac121282d313b0d
+      internalID: 1506618794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_12
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 593
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a16e6f95e43f0459c2b6b994ecbee3
+      internalID: 140839878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_13
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 592
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9a1caa6720e2a4a82b1638f202beb1
+      internalID: -1718650434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_14
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 509
+        width: 107
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad68414cae272f24199f576a7d4663ab
+      internalID: 1971363874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_15
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 507
+        width: 107
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5544395d40d67ec43896b943b0c96cb5
+      internalID: 1904224929
       vertices: []
       indices: 
       edges: []
@@ -406,6 +511,11 @@ TextureImporter:
       sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_0: -334162083
       sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_1: 1663367742
       sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_10: 1939536745
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_11: 1506618794
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_12: 140839878
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_13: -1718650434
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_14: 1971363874
+      sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_15: 1904224929
       sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_2: 56192122
       sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_3: 2022545380
       sprite-spacecraft-ship-game-image-sprite-7487b7bcaa5f413268ced5c69bae68f9_4: -1838598533

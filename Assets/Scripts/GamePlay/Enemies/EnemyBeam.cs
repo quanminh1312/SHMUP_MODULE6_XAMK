@@ -49,11 +49,11 @@ public class EnemyBeam : MonoBehaviour
         if (!charing)
         {
             int maxColliders = 20;
-            Collider[] hits = new Collider[maxColliders];
+            Collider2D[] hits = new Collider2D[maxColliders];
 
             Vector2 center = Vector2.Lerp(transform.position, endPoint.transform.position, 0.5f);
             Vector2 halfSize = new Vector2(beamWidth / 2, (endPoint.transform.position - transform.position).magnitude * 0.5f);
-            int noOfHits = Physics.OverlapBoxNonAlloc(center, halfSize, hits, transform.rotation, layerMask);
+            int noOfHits = Physics2D.OverlapBoxNonAlloc(center, halfSize,transform.eulerAngles.z, hits, layerMask);
             for (int h = 0; h < noOfHits; h++)
             {
                 Craft craft = hits[h].GetComponent<Craft>();

@@ -14,6 +14,8 @@ public class GameInitializer : MonoBehaviour
     public GameObject gameManagerPrefab = null;
     private bool menuLoaded = false;
     private Scene displayScrene;
+
+    public AudioManager.Track playMusicTrack = AudioManager.Track.None;
     private void Awake()
     {
         if (GameManager.Instance == null) 
@@ -29,7 +31,7 @@ public class GameInitializer : MonoBehaviour
     }
     private void Update()
     {
-        if (!menuLoaded) 
+        if (!menuLoaded)
         {
             if (!displayScrene.isLoaded)
             {
@@ -44,7 +46,16 @@ public class GameInitializer : MonoBehaviour
                     MenuManager.instance.SwitchToGameplayMenus();
                     break;
             }
+
+            if (playMusicTrack != AudioManager.Track.None)
+            {
+                AudioManager.instance.PlayMusic(playMusicTrack, true, 1);
+            }
+
+            if (gameMode == GameMode.GamePlay)
+                GameManager.Instance.SpawnPlayers();
+
+            menuLoaded = true;
         }
-        menuLoaded = true;
     }
 }

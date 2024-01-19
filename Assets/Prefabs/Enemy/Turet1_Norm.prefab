@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 519086692, guid: 7ad09369b0d077b439eacbe31789694d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -164,6 +164,7 @@ MonoBehaviour:
   target: {fileID: 0}
   homing: 0
   dAngle: 0
+  shootSound: {fileID: 0}
   playerIndex: 2
 --- !u!1 &7028877437324124597
 GameObject:
@@ -175,8 +176,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6862118176127262152}
   - component: {fileID: 8922165248865880835}
-  - component: {fileID: 3161977187982175894}
-  - component: {fileID: 1226630495835404447}
   m_Layer: 11
   m_Name: Turet1_Norm
   m_TagString: Untagged
@@ -217,50 +216,32 @@ MonoBehaviour:
     positionX: 0
     positionY: 0
     patternUID: 0
+  rules:
+  - triggered: 0
+    noOfPartsRequired: 1
+    parts:
+    - {fileID: 3121916530850941630}
+    ruleEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8922165248865880835}
+          m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+          m_MethodName: Destroyed
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    eventDelays: 
   sections:
   - {fileID: 7599481277863681918}
---- !u!65 &3161977187982175894
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7028877437324124597}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 18.93573, y: 14.566761, z: 1}
-  m_Center: {x: 0, y: -0.057489395, z: 0}
---- !u!114 &1226630495835404447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7028877437324124597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4da534848c174d549868148b18222b63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  radiousOrWidth: 18
-  heigth: 14
-  box: 1
-  damagedByBullets: 1
-  damagedByBombs: 1
-  damagedByBeam: 1
-  spawnCyclicPickUp: 1
-  spawnSpecificPickUp: []
+  isBoss: 0
+  timeOut: 3600
+  timeoutParameterName: 
 --- !u!1 &8746949646097964472
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   states:
   - stateName: Shooting
+    active: 0
     eventonStart:
       m_PersistentCalls:
         m_Calls:
@@ -378,6 +360,9 @@ GameObject:
   - component: {fileID: 229159178401004603}
   - component: {fileID: 4990954144229961981}
   - component: {fileID: 3121916530850941630}
+  - component: {fileID: 8828590943188709433}
+  - component: {fileID: 7337558840567689536}
+  - component: {fileID: 713577784047580102}
   m_Layer: 11
   m_Name: Tanks_17
   m_TagString: Untagged
@@ -465,3 +450,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593b74156af6139469137ae7f1088236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
+  damaged: 0
+  damagedVersion: {fileID: 0}
+  destroyVersion: {fileID: 0}
+  triggerOnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyByPlayer: 2
+--- !u!61 &8828590943188709433
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959640535819623938}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 343, y: 388}
+    newSize: {x: 343, y: 388}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 18, y: 20}
+  m_EdgeRadius: 0
+--- !u!114 &7337558840567689536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959640535819623938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da534848c174d549868148b18222b63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  radiousOrWidth: 18
+  heigth: 20
+  box: 1
+  polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
+  damagedByBullets: 1
+  damagedByBombs: 1
+  damagedByBeam: 1
+  spawnCyclicPickUp: 1
+  spawnSpecificPickUp: []
+  destroyedSound: {fileID: 713577784047580102}
+  hitScore: 10
+  destroyScore: 1000
+--- !u!114 &713577784047580102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8959640535819623938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5daafe97d45979246bd6146a624b4b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 27fcc114d2b6a4747bd5b36ad399d190, type: 3}
+  - {fileID: 8300000, guid: 9c01909a56fa4684ca417ad059d023a5, type: 3}
+  - {fileID: 8300000, guid: 78a4c74d197819742a620e15843fb968, type: 3}

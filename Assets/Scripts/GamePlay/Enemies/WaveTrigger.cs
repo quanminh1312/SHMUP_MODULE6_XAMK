@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -7,6 +8,21 @@ public class WaveTrigger : MonoBehaviour
 {
     public EnemyPattern[] patterns = null;
     public float[] delays = null;
+
+    public int waveBonus = 0;
+    public bool spawnCyclicPickUp = false;
+    public PickUp[] spawnSpecificPickUp;
+
+    public int noOfEnemies = 0;
+    private void Start()
+    {
+        foreach (EnemyPattern pattern in patterns)
+        {
+            if (pattern) noOfEnemies++;
+        }
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         StartCoroutine(spawnWave());
@@ -16,12 +32,16 @@ public class WaveTrigger : MonoBehaviour
         int i =0;
         foreach (EnemyPattern pattern in patterns)
         {
-            Session.Hardness hardness = GameManager.Instance.gameSession.hardness;
-            if (delays != null && i < delays.Length) yield return new WaitForSeconds(delays[i]);
-            if (pattern.spawnOnEasy && hardness == Session.Hardness.Easy) pattern.Spawn();
-            if (pattern.spawnOnNormal && hardness == Session.Hardness.Normal) pattern.Spawn();
-            if (pattern.spawnOnHard && hardness == Session.Hardness.Hard) pattern.Spawn();
-            if (pattern.spawnOnInsane && hardness == Session.Hardness.Insane) pattern.Spawn();
+            if (pattern)
+            {
+                pattern.owingWave = this;
+                Session.Hardness hardness = GameManager.Instance.gameSession.hardness;
+                if (delays != null && i < delays.Length) yield return new WaitForSeconds(delays[i]);
+                if (pattern.spawnOnEasy && hardness == Session.Hardness.Easy) pattern.Spawn();
+                if (pattern.spawnOnNormal && hardness == Session.Hardness.Normal) pattern.Spawn();
+                if (pattern.spawnOnHard && hardness == Session.Hardness.Hard) pattern.Spawn();
+                if (pattern.spawnOnInsane && hardness == Session.Hardness.Insane) pattern.Spawn();
+            }
             i++;
         }
         yield return null;
@@ -44,4 +64,22 @@ public class WaveTrigger : MonoBehaviour
         }
     }
 #endif
+    public void EnemyDestroyed(Vector3 pos, int playerIndex)
+    {
+        noOfEnemies--;
+        if (noOfEnemies <=0) //none left
+        {
+            ScoreManager.instance.ShootableDestroyed(playerIndex, waveBonus);
+
+            if (spawnCyclicPickUp)
+            {
+                PickUp spawn = GameManager.Instance.GetNextDrop();
+                GameManager.Instance.SpawnPickUp(spawn, pos);
+            }
+            foreach (PickUp p in spawnSpecificPickUp)
+            {
+                GameManager.Instance.SpawnPickUp(p, pos);
+            }
+        }
+    }
 }

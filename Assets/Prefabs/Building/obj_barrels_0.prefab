@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 56776542432185135}
   - component: {fileID: 5386696356270269673}
   - component: {fileID: 92920374528891427}
-  - component: {fileID: 6714353940146637877}
+  - component: {fileID: 6748577395439186641}
+  - component: {fileID: 7932436089443744917}
   m_Layer: 11
   m_Name: obj_barrels_0
   m_TagString: Untagged
@@ -102,16 +103,26 @@ MonoBehaviour:
   radiousOrWidth: 45
   heigth: 30
   box: 1
+  polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 0
   damagedByBombs: 1
   damagedByBeam: 0
---- !u!65 &6714353940146637877
-BoxCollider:
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  destroyedSound: {fileID: 7932436089443744917}
+  hitScore: 10
+  destroyScore: 1000
+--- !u!61 &6748577395439186641
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2918662309010254018}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -120,9 +131,47 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 206, y: 176}
+    newSize: {x: 206, y: 176}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 206, y: 176}
+  m_EdgeRadius: 0
+--- !u!114 &7932436089443744917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2918662309010254018}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 153.10757, y: 106.15606, z: 0.19999996}
-  m_Center: {x: -2.9286046, y: 10.181459, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5daafe97d45979246bd6146a624b4b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 27fcc114d2b6a4747bd5b36ad399d190, type: 3}
+  - {fileID: 8300000, guid: 9c01909a56fa4684ca417ad059d023a5, type: 3}
+  - {fileID: 8300000, guid: 78a4c74d197819742a620e15843fb968, type: 3}

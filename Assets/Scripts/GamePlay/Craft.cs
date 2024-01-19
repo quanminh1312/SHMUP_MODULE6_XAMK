@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Craft : MonoBehaviour
 {
-    public CraftData craftData = new CraftData();
+    
     Vector3 newPosition = new Vector3();
 
     public SpriteRenderer flame1;
@@ -15,6 +15,7 @@ public class Craft : MonoBehaviour
 
     public CraftConfiguration config;
     public int playerIndex;
+    public CraftData craftData = new CraftData();
 
     Animator animator;
     int leftBoolID;
@@ -26,6 +27,10 @@ public class Craft : MonoBehaviour
     int invunerableTimer = 120;
     const int INVUNERABLELENGHT = 120;
     public static int MAXIMUMBEAMCHARGE = 64;
+
+    const int MAXLIVES = 5;
+    const int MAXSMALLBOMBS = 8;
+    const int MAXLARGEBOMBS = 6;
 
     int layerMask = 1;
     int pickUpLayer = 0;
@@ -41,8 +46,12 @@ public class Craft : MonoBehaviour
     public Beam beam = null;
 
     public GameObject BombPrefab = null;
+
+    public SoundFX explodingNoise = null;
+    public SoundFX bombSound = null;
     private void Start()
     {
+        craftData = GameManager.Instance.gameSession.craftDatas[playerIndex];
         animator = GetComponent<Animator>();
         Debug.Assert(animator);
         leftBoolID = Animator.StringToHash("left");
@@ -82,21 +91,23 @@ public class Craft : MonoBehaviour
 
         // hit detection
         int maxColliders = 10;
-        Collider[] hits = new Collider[maxColliders];
+        Collider2D[] hits = new Collider2D[maxColliders];
 
 
         //bullet hits
         Vector2 halfSize = new Vector2(3f, 4f);
-        int noOfHits = Physics.OverlapBoxNonAlloc(transform.position
+        int noOfHits = Physics2D.OverlapBoxNonAlloc(transform.position
                                     , halfSize
-                                    , hits,Quaternion.identity,layerMask);
-        if (noOfHits > 0)
+                                    , 0 //transfrom.rotation
+                                    , hits
+                                    , layerMask);
+        if (noOfHits > 0 && alive)
         {
-            foreach (Collider hit in hits)
+            foreach (Collider2D hit in hits)
             {
                 if (hit)
                 {
-                    if (hit.gameObject.layer != pickUpLayer) Hit();
+                    if (hit.gameObject.layer != pickUpLayer && alive) Hit();
                 }
             }
         }
@@ -104,16 +115,18 @@ public class Craft : MonoBehaviour
 
         // pickups and Bullet Grazing
         halfSize = new Vector2(15f, 20f);
-        noOfHits = Physics.OverlapBoxNonAlloc(transform.position
+        noOfHits = Physics2D.OverlapBoxNonAlloc(transform.position
                                     , halfSize
-                                    , hits, Quaternion.identity, layerMask);
-        if (noOfHits > 0)
+                                    , 0 //transfrom.rotation
+                                    , hits
+                                    , layerMask);
+        if (noOfHits > 0 && alive)
         {
-            foreach (Collider hit in hits)
+            foreach (Collider2D hit in hits)
             {
                 if (hit)
                 {
-                    if (hit.gameObject.layer == pickUpLayer) PickUp(hit.GetComponent<PickUp>());
+                    if (hit.gameObject.layer == pickUpLayer && alive) PickUp(hit.GetComponent<PickUp>());
                     else //bullet grazing
                     if (craftData.beamCharge < MAXIMUMBEAMCHARGE)
                     {
@@ -135,6 +148,7 @@ public class Craft : MonoBehaviour
                 if (GameManager.Instance.playerDatas[playerIndex].chainTimer == 0)
                 {
                     GameManager.Instance.playerDatas[playerIndex].chain = 0;
+                    ScoreManager.instance.UpdateChainMultiplier(playerIndex);
                 }
             }
 
@@ -214,15 +228,18 @@ public class Craft : MonoBehaviour
             pickUp.ProcessPickUp(playerIndex, craftData);
         }
     }
-    public void PowerUp(int powerLevel)
+    public void PowerUp(int powerLevel, int surplusValue)
     {
         craftData.shotPower += powerLevel;
         if (craftData.shotPower > CraftConfiguration.MAX_SHOT_POWER - 1)
+        {
+            ScoreManager.instance.PickUpCollected(playerIndex, surplusValue);
             craftData.shotPower = CraftConfiguration.MAX_SHOT_POWER - 1;
+        }
     }
     public void Hit()
     {
-        if (!invunerable)
+        if (!invunerable && !GameManager.Instance.gameSession.invincible)
         {
             Explode();
         }
@@ -231,6 +248,8 @@ public class Craft : MonoBehaviour
     {
         if (craftData.smallBombs >0)
         {
+            if (bombSound)
+                bombSound.Play();
             craftData.smallBombs--;
             Vector3 pos = transform.position;
             pos.y += 100;
@@ -265,7 +284,11 @@ public class Craft : MonoBehaviour
     public void Explode()
     {
         alive = false;
+        GameManager.Instance.playerDatas[playerIndex].lives--;
         StartCoroutine(Exploding());
+
+        if (explodingNoise)
+            explodingNoise.Play();
     }
 
     IEnumerator Exploding()
@@ -281,17 +304,51 @@ public class Craft : MonoBehaviour
         
         EffectSystem.instance.CraftExplosion(transform.position);
         Destroy(gameObject);
-        GameManager.Instance.playerCrafts[0] = null;//error
+        GameManager.Instance.playerCrafts[playerIndex] = null;
+
+        if (GameManager.Instance.playerDatas[playerIndex].lives == 0)
+        {
+            GameOverMenu.instance.GameOver();
+        }
+        else
+        {
+            //eject powerups and spawn next lives
+            CraftData craftData = GameManager.Instance.gameSession.craftDatas[playerIndex];
+            int noOfOptionsToRespawn = craftData.noOfEnableOptions - 1;
+            int noOfPowerUpsToRespawn = craftData.shotPower - 1;
+            int noOfBeamUpsToRespawn = craftData.beamPower - 1;
+            GameManager.Instance.ResetState(playerIndex);
+
+            for (int o = 0; o < noOfOptionsToRespawn; o++)
+            {
+                PickUp pickUp = GameManager.Instance.SpawnPickUp(GameManager.Instance.option, transform.position);
+                pickUp.transform.position += new Vector3(UnityEngine.Random.Range(-128, 128), UnityEngine.Random.Range(-128, 128), 0);
+            }
+            for (int o = 0; o < noOfPowerUpsToRespawn; o++)
+            {
+                PickUp pickUp = GameManager.Instance.SpawnPickUp(GameManager.Instance.powerUp, transform.position);
+                pickUp.transform.position += new Vector3(UnityEngine.Random.Range(-128, 128), UnityEngine.Random.Range(-128, 128), 0);
+            }
+            for (int o = 0; o < noOfBeamUpsToRespawn; o++)
+            {
+                PickUp pickUp = GameManager.Instance.SpawnPickUp(GameManager.Instance.beamUp, transform.position);
+                pickUp.transform.position += new Vector3(UnityEngine.Random.Range(-128, 128), UnityEngine.Random.Range(-128, 128), 0);
+            }
+
+            GameManager.Instance.DelayedRespawn(playerIndex);
+        }
 
         yield return null;
     }
-    public void AddOption()
+    public void AddOption(int surplusValue)
     {
         if (craftData.noOfEnableOptions < 4)
         {
             options[craftData.noOfEnableOptions].gameObject.SetActive(true);
             craftData.noOfEnableOptions++;
         }
+        else
+            ScoreManager.instance.PickUpCollected(playerIndex, surplusValue);
     }
     public void SetOptionLayout(int layoutIndex)
     {
@@ -320,30 +377,54 @@ public class Craft : MonoBehaviour
             }
         }
     }
-    public void IncreaseBeamStrenght()
+    public void IncreaseBeamStrenght(int surplusValue)
     {
         if(craftData.beamPower < 5)
         {
             craftData.beamPower++;
             UpdateBeam();
         }
+        else
+        {
+            ScoreManager.instance.PickUpCollected(playerIndex, surplusValue);
+        }
     }
-    public void AddBomb(int power)
+    public void AddBomb(int power, int surplusValue)
     {
         if (power == 1)
+        {
             craftData.smallBombs++;
+            if (craftData.smallBombs > MAXSMALLBOMBS)
+            {
+                craftData.smallBombs = MAXSMALLBOMBS;
+                ScoreManager.instance.PickUpCollected(playerIndex, surplusValue);
+            }
+        }
         else if (power == 2)
+        {
             craftData.largeBombs++;
+            if (craftData.largeBombs > MAXLARGEBOMBS)
+            {
+                craftData.largeBombs = MAXLARGEBOMBS;
+                ScoreManager.instance.PickUpCollected(playerIndex, surplusValue);
+            }
+        }
         else
             Debug.LogError("Invalid bomb power pickup");
     }
-    public void OneUp()
+    public void OneUp(int surplusValue)
     {
         GameManager.Instance.playerDatas[playerIndex].lives++;
+        if (GameManager.Instance.playerDatas[playerIndex].lives > (byte)MAXLIVES)
+        {
+            ScoreManager.instance.PickUpCollected(playerIndex, surplusValue);
+            GameManager.Instance.playerDatas[playerIndex].lives = (byte)MAXLIVES;
+        }
     }
     public void AddMedal(int value, int level)
     {
-        InceaseScore(value);
+        ScoreManager.instance.MedalCollected(playerIndex, value);
+        //InceaseScore(value);
     }
     void UpdateBeam()
     {

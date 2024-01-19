@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class EnemyState
 {
     public String stateName;
-    private bool active;
+    public bool active = false;
 
     [Space(10)]
     [Header("Start Events")]
@@ -28,10 +28,25 @@ public class EnemyState
 
     public void Enable()
     {
+        currentTime = 0;
         eventonStart.Invoke();
+        active = true;
     }
     public void Disable()
     {
         eventonEnd.Invoke();
+        active = false;
+    }
+    public void  IncreaseTime()
+    {
+        if (usersTimer)
+        {
+            currentTime++;
+            if (currentTime >= timer)
+            {
+                eventonTime.Invoke();
+                currentTime = 0;
+            }
+        }
     }
 }

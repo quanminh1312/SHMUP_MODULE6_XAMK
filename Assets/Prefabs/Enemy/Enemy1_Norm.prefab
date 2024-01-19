@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 3024128855972395725}
   - component: {fileID: 397790375425804524}
   - component: {fileID: 1001944229879421077}
+  - component: {fileID: 5388152402962131435}
+  - component: {fileID: 464242248332079088}
+  - component: {fileID: 3105199248842680604}
   m_Layer: 7
   m_Name: MainPart
   m_TagString: Untagged
@@ -98,6 +101,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 593b74156af6139469137ae7f1088236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
+  damaged: 0
+  damagedVersion: {fileID: 0}
+  destroyVersion: {fileID: 0}
+  triggerOnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyByPlayer: 2
+--- !u!61 &5388152402962131435
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126240600515989808}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 44, y: 46}
+    newSize: {x: 44, y: 46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 16, y: 16}
+  m_EdgeRadius: 0
+--- !u!114 &464242248332079088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126240600515989808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da534848c174d549868148b18222b63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  radiousOrWidth: 16
+  heigth: 16
+  box: 1
+  polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
+  damagedByBullets: 1
+  damagedByBombs: 1
+  damagedByBeam: 1
+  spawnCyclicPickUp: 1
+  spawnSpecificPickUp: []
+  destroyedSound: {fileID: 3105199248842680604}
+  hitScore: 10
+  destroyScore: 1000
+--- !u!114 &3105199248842680604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126240600515989808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5daafe97d45979246bd6146a624b4b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 27fcc114d2b6a4747bd5b36ad399d190, type: 3}
+  - {fileID: 8300000, guid: 9c01909a56fa4684ca417ad059d023a5, type: 3}
+  - {fileID: 8300000, guid: 78a4c74d197819742a620e15843fb968, type: 3}
 --- !u!1 &2593024475419866726
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   states:
   - stateName: Nothing
+    active: 0
     eventonStart:
       m_PersistentCalls:
         m_Calls: []
@@ -157,6 +257,7 @@ MonoBehaviour:
     usersTimer: 0
     timer: 0
   - stateName: Shooting
+    active: 0
     eventonStart:
       m_PersistentCalls:
         m_Calls:
@@ -254,6 +355,7 @@ MonoBehaviour:
   target: {fileID: 0}
   homing: 0
   dAngle: 0
+  shootSound: {fileID: 0}
   playerIndex: 2
 --- !u!1 &8104330452123662259
 GameObject:
@@ -265,8 +367,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5875425526475805984}
   - component: {fileID: 721165377856112742}
-  - component: {fileID: 8102425227554487449}
-  - component: {fileID: 7724786346488302302}
   m_Layer: 7
   m_Name: Enemy1_Norm
   m_TagString: Untagged
@@ -307,47 +407,29 @@ MonoBehaviour:
     positionX: 0
     positionY: 0
     patternUID: 0
+  rules:
+  - triggered: 0
+    noOfPartsRequired: 1
+    parts:
+    - {fileID: 1001944229879421077}
+    ruleEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 721165377856112742}
+          m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+          m_MethodName: Destroyed
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    eventDelays: 
   sections:
   - {fileID: 4287816635412119223}
---- !u!65 &8102425227554487449
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8104330452123662259}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 16, y: 16, z: 0.2}
-  m_Center: {x: 0.0000009536743, y: 1.2546568, z: 0}
---- !u!114 &7724786346488302302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8104330452123662259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4da534848c174d549868148b18222b63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  radiousOrWidth: 16
-  heigth: 16
-  box: 1
-  damagedByBullets: 1
-  damagedByBombs: 1
-  damagedByBeam: 1
-  spawnCyclicPickUp: 1
-  spawnSpecificPickUp: []
+  isBoss: 0
+  timeOut: 3600
+  timeoutParameterName: 

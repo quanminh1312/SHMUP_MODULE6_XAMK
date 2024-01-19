@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DisplayScene.unity
     guid: 5c879629d46800c43895aa1ff0fa972b
+  - enabled: 1
+    path: Assets/Scenes/DebugHUD.unity
+    guid: fa6d4294936aa9048b66cbe1b4f45a61
+  - enabled: 1
+    path: Assets/Scenes/Menus/GameOverMenu.unity
+    guid: a338732cbab647740aeba3351df00710
   m_configObjects: {}

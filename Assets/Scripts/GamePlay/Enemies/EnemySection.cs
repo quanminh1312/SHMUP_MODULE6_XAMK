@@ -25,4 +25,28 @@ public class EnemySection : MonoBehaviour
             }
         }
     }
+    public void UpdateStateTimer()
+    {
+        foreach (EnemyState state in states)
+        {
+            if (state.active)
+                state.IncreaseTime();
+        }
+    }
+    public void TimeOutMessage()
+    {
+        Enemy enemy = transform.parent.GetComponent<Enemy>();
+        if (enemy)
+        {
+            enemy.TimeOutDestruct();
+        }
+    }
+    public void UpdateStateTimers()
+    {
+        foreach (EnemyState state in states)
+        {
+            if (state.active)
+                state.IncreaseTime();
+        }
+    }
 }

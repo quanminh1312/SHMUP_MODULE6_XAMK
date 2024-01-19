@@ -30,6 +30,8 @@ public class BulletSpawner : MonoBehaviour
     public bool homing = false;
     public float dAngle = 0;
 
+    public SoundFX shootSound = null;
+
     //public bool isPlayer = false;
     public int playerIndex = 2; // >1 = enemy, 0 = player 1, 1 = player 2
     public void shoot(int size)
@@ -82,6 +84,8 @@ public class BulletSpawner : MonoBehaviour
             }
             if (muzzleFlash)
                 muzzleFlash.SetActive(true);
+            if (shootSound)
+                shootSound.Play();
         }
     }
     private void FixedUpdate()

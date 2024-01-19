@@ -294,6 +294,7 @@ MonoBehaviour:
   spawnOnNormal: 1
   spawnOnHard: 0
   spawnOnInsane: 0
+  owingWave: {fileID: 0}
   lasPosition: {x: 0, y: 0, z: 0}
   currentPosition: {x: 0, y: 0, z: 0}
   lastAngle:
@@ -356,15 +357,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
+    x: 0.402
+    y: -0.058
+    width: 0.37
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 180
+  orthographic size: 927.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -527,6 +528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMode: 2
   gameManagerPrefab: {fileID: 2947249443713221648, guid: 5a7c615f933d31b46b21dddc2bd6f484, type: 3}
+  playMusicTrack: 7
 --- !u!4 &1519741690
 Transform:
   m_ObjectHideFlags: 0

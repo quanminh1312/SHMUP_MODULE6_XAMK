@@ -12,30 +12,42 @@ public class Beam : MonoBehaviour
     public GameObject beamFlash = null;
     public GameObject[] beamHits = new GameObject[5];
     const int MINIMUM_CHARGE = 10;
+    const int MAXRAYHITS = 10;
+
+    public AudioSource audioSource = null;
+
+
+    CraftData craftData;
+
     private void Start()
     {
         layerMask = ~LayerMask.GetMask("Player") & ~LayerMask.GetMask("PlayerBullets");
+        craftData = GameManager.Instance.gameSession.craftDatas[craft.playerIndex];
     }
     public void Fire()
     {
-        if (!craft.craftData.beamFiring)
+        if (!craftData.beamFiring)
         {
-            if (craft.craftData.beamCharge < MINIMUM_CHARGE)
+            if (craftData.beamCharge < MINIMUM_CHARGE)
             {
                 UpdateBeam();
                 return;
             }
-            craft.craftData.beamFiring = true;
-            craft.craftData.beamTimer = craft.craftData.beamCharge;
-            craft.craftData.beamCharge = 0;
+            craftData.beamFiring = true;
+            craftData.beamTimer = craftData.beamCharge;
+            craftData.beamCharge = 0;
             UpdateBeam();
             gameObject.SetActive(true);
             beamFlash.SetActive(true);
+            if (audioSource)
+            {
+                audioSource.Play();
+            }
         }
     }
     private void FixedUpdate()
     {
-        if (craft.craftData.beamFiring)
+        if (craftData.beamFiring)
             UpdateBeam();   
     }
     void HideHits()
@@ -47,11 +59,15 @@ public class Beam : MonoBehaviour
     }
     private void UpdateBeam()
     {
-        if (craft.craftData.beamTimer > 0 ) craft.craftData.beamTimer--;
-        if (craft.craftData.beamTimer <= 0)
+        if (craftData.beamTimer > 0 ) craftData.beamTimer--;
+        if (craftData.beamTimer <= 0)
         {
-            craft.craftData.beamFiring = false;
+            craftData.beamFiring = false;
             HideHits();
+            if (audioSource)
+            {
+                audioSource.Stop();
+            }
             gameObject.SetActive(false);
             beamFlash.SetActive(false);
         }
@@ -65,14 +81,18 @@ public class Beam : MonoBehaviour
                 topY += GameManager.Instance.progressWindow.data.positionY;
 
             int maxColliders = 20;
-            Collider[] hits = new Collider[maxColliders];
+            Collider2D[] hits = new Collider2D[maxColliders];
             Vector2 halfSize = new Vector2(beamWidth * 0.5f, (topY - craft.transform.position.y) * 0.5f);
             float midlleY = (craft.transform.position.y + topY) * 0.5f;
             Vector3 center = new Vector3(craft.transform.position.x, midlleY, 0);
-            int noOfHits = Physics.OverlapBoxNonAlloc(center, halfSize, hits, Quaternion.identity, layerMask);
+            int noOfHits = Physics2D.OverlapBoxNonAlloc(center
+                                                        , halfSize
+                                                        , 0 //transfrom.rotation,
+                                                        , hits
+                                                        , layerMask);
             float lowest = topY;
             Shootable lowestShootable = null;
-            Collider lowestCollider = null;
+            Collider2D lowestCollider = null;
             if (noOfHits > 0)
             {
                 //find lowest hit
@@ -81,14 +101,14 @@ public class Beam : MonoBehaviour
                     Shootable shootable = hits[h].GetComponent<Shootable>();
                     if (shootable && shootable.damagedByBeam)
                     {
-                        RaycastHit hitInfo;
-                        Ray ray = new Ray(craft.transform.position, Vector3.up);
+                        RaycastHit2D[] hitInfo = new RaycastHit2D[MAXRAYHITS];
+                        Vector2 ray = Vector3.up;
                         float heigth = topY - craft.transform.position.y;
-                        if (hits[h].Raycast(ray, out hitInfo, heigth))
+                        if (hits[h].Raycast(ray,hitInfo, heigth) > 0)
                         {
-                            if (hitInfo.point.y < lowest)
+                            if (hitInfo[0].point.y < lowest)
                             {
-                                lowest = hitInfo.point.y;
+                                lowest = hitInfo[0].point.y;
                                 lowestShootable = hits[h].GetComponent<Shootable>();
                                 lowestCollider = hits[h];
                             }
@@ -104,16 +124,16 @@ public class Beam : MonoBehaviour
                     //fire 5 rays to find each hit
                     for (int h = 0; h < 5; h++)
                     {
-                        RaycastHit hitInfo;
-                        Ray ray = new Ray(start, Vector3.up);
-                        if (lowestCollider.Raycast(ray, out hitInfo, 360))
+                        RaycastHit2D[] hitInfo = new RaycastHit2D[MAXRAYHITS];
+                        Vector2 ray = Vector3.up;
+                        if (lowestCollider.Raycast(ray,hitInfo, 360) >0)
                         {
-                            Vector3 pos = hitInfo.point;
+                            Vector3 pos = hitInfo[0].point;
                             pos.x += Random.Range(-3f, 3f);
                             pos.y += Random.Range(-3f, 3f);
                             beamHits[h].transform.position = pos;
                             beamHits[h].gameObject.SetActive(true);
-                            lowestShootable.takeDamage(craft.craftData.beamPower + 1,playerIndex);
+                            lowestShootable.takeDamage(craftData.beamPower + 1,playerIndex);
                         }
                         else
                         {

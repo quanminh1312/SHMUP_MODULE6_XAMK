@@ -24,6 +24,8 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("ControllerMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("OptionsMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("ControlSettingsMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("DebugHUD", LoadSceneMode.Additive);
+        SceneManager.LoadScene("GameOverMenu", LoadSceneMode.Additive);
     }
     public void SwitchToMainMenuMenus()
     {
@@ -32,5 +34,7 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("ControllerMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("OptionsMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("ControlSettingsMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("DebugHUD", LoadSceneMode.Additive);
+        SceneManager.LoadScene("GameOverMenu", LoadSceneMode.Additive);
     }
 }

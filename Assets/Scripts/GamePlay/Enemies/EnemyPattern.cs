@@ -22,6 +22,8 @@ public class EnemyPattern : MonoBehaviour
     public bool spawnOnHard = false;
     public bool spawnOnInsane = false;
 
+    public WaveTrigger owingWave = null;
+
     [HideInInspector]
     public Vector3 lasPosition = Vector3.zero;
     [HideInInspector]
@@ -84,6 +86,7 @@ public class EnemyPattern : MonoBehaviour
         if (spawnedEnemy == null)
         {
             spawnedEnemy = Instantiate(enmyPrefab, transform.position, transform.rotation).GetComponent<Enemy>();
+            spawnedEnemy.setWave(owingWave);
             spawnedEnemy.SetPattern(this);
 
             lasPosition = spawnedEnemy.transform.position;
@@ -94,7 +97,12 @@ public class EnemyPattern : MonoBehaviour
     public Vector2 CalculatePosition(float progressTimer)
     {
         currentStateIndex = WhichStep(progressTimer);
-        if (currentStateIndex < 0) return spawnedEnemy.transform.position;
+        if (currentStateIndex < 0)
+        {
+            if (spawnedEnemy)
+                return spawnedEnemy.transform.position;
+            return Vector2.zero;
+        }
 
         lasPosition = currentPosition;
         EnemyStep step = steps[currentStateIndex];  
@@ -107,6 +115,11 @@ public class EnemyPattern : MonoBehaviour
     public Quaternion CalculateRotation(float ProgressTimer)
     {
         currentStateIndex = WhichStep(ProgressTimer);
+
+        if (currentStateIndex <0)
+        {
+            return Quaternion.identity;
+        }
         float startRotation = 0;
         if (currentStateIndex > 0)
             startRotation = steps[currentStateIndex - 1].EndRotation();

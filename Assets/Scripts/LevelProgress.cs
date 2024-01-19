@@ -15,6 +15,7 @@ public class LevelProgress : MonoBehaviour
 
     private Craft playerOneCraft = null;
 
+    private float ratio;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,16 +26,16 @@ public class LevelProgress : MonoBehaviour
         {
             GameManager.Instance.progressWindow = this;
         }
+        ratio = (float)data.progress / (float)levelSize;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (data.progress < levelSize)
         {
-            float ratio = (float)data.progress / (float)levelSize;
             float movement = speedCurve.Evaluate(ratio);
-            data.progress++;
+            data.progress = (int)(data.positionY + movement);
 
             if (playerOneCraft==null)
                 playerOneCraft = GameManager.Instance.playerCrafts[0];//error

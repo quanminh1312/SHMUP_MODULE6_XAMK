@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6092997790601957128}
   - component: {fileID: 4527235703465388950}
   - component: {fileID: 7981452035612097289}
-  - component: {fileID: 2256251514965229864}
+  - component: {fileID: 5593858365503365860}
+  - component: {fileID: 7348467987144924264}
   m_Layer: 11
   m_Name: obj_barrel1_0
   m_TagString: Untagged
@@ -102,16 +103,26 @@ MonoBehaviour:
   radiousOrWidth: 12.6
   heigth: 30
   box: 0
+  polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 0
   damagedByBombs: 1
   damagedByBeam: 0
---- !u!135 &2256251514965229864
-SphereCollider:
+  spawnCyclicPickUp: 0
+  spawnSpecificPickUp: []
+  destroyedSound: {fileID: 7348467987144924264}
+  hitScore: 10
+  destroyScore: 1000
+--- !u!58 &5593858365503365860
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9030753227401694029}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -120,9 +131,37 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 25.681494}
+  serializedVersion: 2
+  m_Radius: 43
+--- !u!114 &7348467987144924264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9030753227401694029}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 42.233932
-  m_Center: {x: 0, y: 26.766068, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5daafe97d45979246bd6146a624b4b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 27fcc114d2b6a4747bd5b36ad399d190, type: 3}
+  - {fileID: 8300000, guid: 9c01909a56fa4684ca417ad059d023a5, type: 3}
+  - {fileID: 8300000, guid: 78a4c74d197819742a620e15843fb968, type: 3}

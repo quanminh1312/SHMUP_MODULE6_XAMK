@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7918817193947795705}
   - component: {fileID: 52973715265194668}
   - component: {fileID: 9196404267337282465}
-  - component: {fileID: -8818860553807737172}
+  - component: {fileID: 3895286428505473049}
+  - component: {fileID: 4528032029459251004}
   m_Layer: 12
   m_Name: BeamPickUp
   m_TagString: Untagged
@@ -101,13 +102,16 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: 0d00eb630d7b57b468074b5c391f2f7c, type: 2}
   position: {x: 0, y: 0}
   velocity: {x: 0, y: 0}
---- !u!135 &-8818860553807737172
-SphereCollider:
+  sounds: {fileID: 4528032029459251004}
+--- !u!58 &3895286428505473049
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6965878249712307606}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -116,9 +120,35 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
   m_Radius: 2.5099998
-  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4528032029459251004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6965878249712307606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5daafe97d45979246bd6146a624b4b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: f7220f4ab4cef3b4c83c0d9a1b443728, type: 3}
