@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 8676776}
   - component: {fileID: 8676778}
   - component: {fileID: 8676777}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 20632046}
   - component: {fileID: 20632048}
   - component: {fileID: 20632047}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 22287862}
   - component: {fileID: 22287864}
   - component: {fileID: 22287863}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 29818588}
   - component: {fileID: 29818589}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -468,7 +468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 48840550}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76830985}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 92312255}
   - component: {fileID: 92312257}
   - component: {fileID: 92312256}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 96499185}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +657,7 @@ GameObject:
   - component: {fileID: 97657252}
   - component: {fileID: 97657251}
   - component: {fileID: 97657253}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 107446140}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -796,7 +796,7 @@ GameObject:
   - component: {fileID: 118897007}
   - component: {fileID: 118897009}
   - component: {fileID: 118897008}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Live (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 163966923}
   - component: {fileID: 163966922}
   - component: {fileID: 163966924}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -975,7 +975,7 @@ GameObject:
   - component: {fileID: 164620854}
   - component: {fileID: 164620856}
   - component: {fileID: 164620855}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1048,7 +1048,7 @@ GameObject:
   - component: {fileID: 175027481}
   - component: {fileID: 175027480}
   - component: {fileID: 175027479}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1152,7 +1152,7 @@ GameObject:
   - component: {fileID: 179431843}
   - component: {fileID: 179431842}
   - component: {fileID: 179431841}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1253,7 +1253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 202304365}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Bombs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,7 +1301,7 @@ GameObject:
   - component: {fileID: 216626945}
   - component: {fileID: 216626944}
   - component: {fileID: 216626943}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 217491746}
   - component: {fileID: 217491748}
   - component: {fileID: 217491747}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1477,7 +1477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 237048378}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1536,7 +1536,7 @@ GameObject:
   - component: {fileID: 243317678}
   - component: {fileID: 243317677}
   - component: {fileID: 243317676}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1639,7 +1639,7 @@ GameObject:
   - component: {fileID: 248560079}
   - component: {fileID: 248560081}
   - component: {fileID: 248560080}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Player1HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1713,7 +1713,7 @@ GameObject:
   - component: {fileID: 251234776}
   - component: {fileID: 251234778}
   - component: {fileID: 251234777}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1788,7 +1788,7 @@ GameObject:
   - component: {fileID: 258002996}
   - component: {fileID: 258002998}
   - component: {fileID: 258002997}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Live (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1861,7 +1861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 279365815}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Bombs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1908,7 +1908,7 @@ GameObject:
   - component: {fileID: 301161636}
   - component: {fileID: 301161638}
   - component: {fileID: 301161637}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2042,7 +2042,7 @@ GameObject:
   - component: {fileID: 321409669}
   - component: {fileID: 321409671}
   - component: {fileID: 321409670}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BigBomb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2117,7 +2117,7 @@ GameObject:
   - component: {fileID: 324366198}
   - component: {fileID: 324366200}
   - component: {fileID: 324366199}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2193,7 +2193,7 @@ GameObject:
   - component: {fileID: 358232466}
   - component: {fileID: 358232465}
   - component: {fileID: 358232464}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2294,7 +2294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 373250176}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2332,7 +2332,7 @@ GameObject:
   - component: {fileID: 381929401}
   - component: {fileID: 381929403}
   - component: {fileID: 381929402}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BigBomb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2408,7 +2408,7 @@ GameObject:
   - component: {fileID: 383682570}
   - component: {fileID: 383682569}
   - component: {fileID: 383682568}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2511,7 +2511,7 @@ GameObject:
   - component: {fileID: 394187207}
   - component: {fileID: 394187209}
   - component: {fileID: 394187208}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BigBomb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2585,7 +2585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 401429457}
   - component: {fileID: 401429458}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Player2_Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2657,7 +2657,7 @@ GameObject:
   - component: {fileID: 423850569}
   - component: {fileID: 423850568}
   - component: {fileID: 423850567}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2760,7 +2760,7 @@ GameObject:
   - component: {fileID: 424523095}
   - component: {fileID: 424523097}
   - component: {fileID: 424523096}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2833,7 +2833,7 @@ GameObject:
   - component: {fileID: 433078472}
   - component: {fileID: 433078471}
   - component: {fileID: 433078470}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2937,7 +2937,7 @@ GameObject:
   - component: {fileID: 433724338}
   - component: {fileID: 433724337}
   - component: {fileID: 433724336}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3040,7 +3040,7 @@ GameObject:
   - component: {fileID: 440858280}
   - component: {fileID: 440858282}
   - component: {fileID: 440858281}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3116,7 +3116,7 @@ GameObject:
   - component: {fileID: 467480444}
   - component: {fileID: 467480443}
   - component: {fileID: 467480442}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3220,7 +3220,7 @@ GameObject:
   - component: {fileID: 487458939}
   - component: {fileID: 487458938}
   - component: {fileID: 487458940}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3322,7 +3322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 492405319}
   - component: {fileID: 492405320}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3374,7 +3374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 513730222}
   - component: {fileID: 513730223}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Player1_Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3445,7 +3445,7 @@ GameObject:
   - component: {fileID: 517956616}
   - component: {fileID: 517956618}
   - component: {fileID: 517956617}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3520,7 +3520,7 @@ GameObject:
   - component: {fileID: 527108967}
   - component: {fileID: 527108969}
   - component: {fileID: 527108968}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3654,7 +3654,7 @@ GameObject:
   - component: {fileID: 527877424}
   - component: {fileID: 527877426}
   - component: {fileID: 527877425}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Live (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3729,7 +3729,7 @@ GameObject:
   - component: {fileID: 527969616}
   - component: {fileID: 527969618}
   - component: {fileID: 527969617}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BigBomb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3805,7 +3805,7 @@ GameObject:
   - component: {fileID: 539158303}
   - component: {fileID: 539158302}
   - component: {fileID: 539158301}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3908,7 +3908,7 @@ GameObject:
   - component: {fileID: 542776150}
   - component: {fileID: 542776152}
   - component: {fileID: 542776151}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Live (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3984,7 +3984,7 @@ GameObject:
   - component: {fileID: 544391699}
   - component: {fileID: 544391698}
   - component: {fileID: 544391697}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: digit1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4127,7 +4127,7 @@ GameObject:
   - component: {fileID: 596613886}
   - component: {fileID: 596613888}
   - component: {fileID: 596613887}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4200,7 +4200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 604334187}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4241,7 +4241,7 @@ GameObject:
   - component: {fileID: 644443124}
   - component: {fileID: 644443126}
   - component: {fileID: 644443125}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4375,7 +4375,7 @@ GameObject:
   - component: {fileID: 651556181}
   - component: {fileID: 651556183}
   - component: {fileID: 651556182}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4449,7 +4449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 651622320}
   - component: {fileID: 651622321}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: StageScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4512,7 +4512,7 @@ GameObject:
   - component: {fileID: 662674319}
   - component: {fileID: 662674321}
   - component: {fileID: 662674320}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BigBomb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4587,7 +4587,7 @@ GameObject:
   - component: {fileID: 669380491}
   - component: {fileID: 669380493}
   - component: {fileID: 669380492}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4662,7 +4662,7 @@ GameObject:
   - component: {fileID: 682886443}
   - component: {fileID: 682886445}
   - component: {fileID: 682886444}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4737,7 +4737,7 @@ GameObject:
   - component: {fileID: 683167977}
   - component: {fileID: 683167979}
   - component: {fileID: 683167978}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: P2_PressStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4872,7 +4872,7 @@ GameObject:
   - component: {fileID: 688940610}
   - component: {fileID: 688940609}
   - component: {fileID: 688940611}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: digit1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5015,7 +5015,7 @@ GameObject:
   - component: {fileID: 697698065}
   - component: {fileID: 697698067}
   - component: {fileID: 697698066}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5088,7 +5088,7 @@ GameObject:
   - component: {fileID: 716105698}
   - component: {fileID: 716105697}
   - component: {fileID: 716105699}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5189,7 +5189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 722295129}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5224,7 +5224,7 @@ GameObject:
   - component: {fileID: 725635939}
   - component: {fileID: 725635941}
   - component: {fileID: 725635940}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5297,7 +5297,7 @@ GameObject:
   - component: {fileID: 734314601}
   - component: {fileID: 734314600}
   - component: {fileID: 734314599}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5400,7 +5400,7 @@ GameObject:
   - component: {fileID: 735600281}
   - component: {fileID: 735600283}
   - component: {fileID: 735600282}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5472,7 +5472,7 @@ GameObject:
   - component: {fileID: 736370408}
   - component: {fileID: 736370410}
   - component: {fileID: 736370409}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5548,7 +5548,7 @@ GameObject:
   - component: {fileID: 746100919}
   - component: {fileID: 746100918}
   - component: {fileID: 746100920}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: digit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5691,7 +5691,7 @@ GameObject:
   - component: {fileID: 759224136}
   - component: {fileID: 759224138}
   - component: {fileID: 759224137}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5767,7 +5767,7 @@ GameObject:
   - component: {fileID: 768128558}
   - component: {fileID: 768128557}
   - component: {fileID: 768128556}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5870,7 +5870,7 @@ GameObject:
   - component: {fileID: 780360496}
   - component: {fileID: 780360498}
   - component: {fileID: 780360497}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5945,7 +5945,7 @@ GameObject:
   - component: {fileID: 788492239}
   - component: {fileID: 788492241}
   - component: {fileID: 788492240}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BigBomb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6021,7 +6021,7 @@ GameObject:
   - component: {fileID: 789683497}
   - component: {fileID: 789683496}
   - component: {fileID: 789683495}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6125,7 +6125,7 @@ GameObject:
   - component: {fileID: 838159815}
   - component: {fileID: 838159814}
   - component: {fileID: 838159813}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6226,7 +6226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 839526204}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6262,7 +6262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 858011988}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6301,7 +6301,7 @@ GameObject:
   - component: {fileID: 885099622}
   - component: {fileID: 885099621}
   - component: {fileID: 885099620}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6404,7 +6404,7 @@ GameObject:
   - component: {fileID: 901909871}
   - component: {fileID: 901909873}
   - component: {fileID: 901909872}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6479,7 +6479,7 @@ GameObject:
   - component: {fileID: 926586792}
   - component: {fileID: 926586794}
   - component: {fileID: 926586793}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6614,7 +6614,7 @@ GameObject:
   - component: {fileID: 961120820}
   - component: {fileID: 961120819}
   - component: {fileID: 961120821}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: digit1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6757,7 +6757,7 @@ GameObject:
   - component: {fileID: 961940819}
   - component: {fileID: 961940821}
   - component: {fileID: 961940820}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6833,7 +6833,7 @@ GameObject:
   - component: {fileID: 965677960}
   - component: {fileID: 965677959}
   - component: {fileID: 965677961}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6936,7 +6936,7 @@ GameObject:
   - component: {fileID: 968051984}
   - component: {fileID: 968051986}
   - component: {fileID: 968051985}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Live (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7011,7 +7011,7 @@ GameObject:
   - component: {fileID: 977117637}
   - component: {fileID: 977117639}
   - component: {fileID: 977117638}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7086,7 +7086,7 @@ GameObject:
   - component: {fileID: 979074013}
   - component: {fileID: 979074015}
   - component: {fileID: 979074014}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7161,7 +7161,7 @@ GameObject:
   - component: {fileID: 999566976}
   - component: {fileID: 999566978}
   - component: {fileID: 999566977}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: ChainProgress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7237,7 +7237,7 @@ GameObject:
   - component: {fileID: 1010791885}
   - component: {fileID: 1010791884}
   - component: {fileID: 1010791883}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7340,7 +7340,7 @@ GameObject:
   - component: {fileID: 1023292709}
   - component: {fileID: 1023292711}
   - component: {fileID: 1023292710}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7413,7 +7413,7 @@ GameObject:
   - component: {fileID: 1026649325}
   - component: {fileID: 1026649324}
   - component: {fileID: 1026649326}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7516,7 +7516,7 @@ GameObject:
   - component: {fileID: 1057443550}
   - component: {fileID: 1057443552}
   - component: {fileID: 1057443551}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7591,7 +7591,7 @@ GameObject:
   - component: {fileID: 1063303588}
   - component: {fileID: 1063303590}
   - component: {fileID: 1063303589}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7664,7 +7664,7 @@ GameObject:
   - component: {fileID: 1068624256}
   - component: {fileID: 1068624255}
   - component: {fileID: 1068624257}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7767,7 +7767,7 @@ GameObject:
   - component: {fileID: 1076918701}
   - component: {fileID: 1076918703}
   - component: {fileID: 1076918702}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7903,7 +7903,7 @@ GameObject:
   - component: {fileID: 1078865674}
   - component: {fileID: 1078865676}
   - component: {fileID: 1078865675}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7979,7 +7979,7 @@ GameObject:
   - component: {fileID: 1084278809}
   - component: {fileID: 1084278808}
   - component: {fileID: 1084278807}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8082,7 +8082,7 @@ GameObject:
   - component: {fileID: 1089078813}
   - component: {fileID: 1089078815}
   - component: {fileID: 1089078814}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8216,7 +8216,7 @@ GameObject:
   - component: {fileID: 1105833585}
   - component: {fileID: 1105833587}
   - component: {fileID: 1105833586}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8350,7 +8350,7 @@ GameObject:
   - component: {fileID: 1110081699}
   - component: {fileID: 1110081701}
   - component: {fileID: 1110081700}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BigBomb6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8426,7 +8426,7 @@ GameObject:
   - component: {fileID: 1120026776}
   - component: {fileID: 1120026775}
   - component: {fileID: 1120026777}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8530,7 +8530,7 @@ GameObject:
   - component: {fileID: 1134614689}
   - component: {fileID: 1134614688}
   - component: {fileID: 1134614687}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8633,7 +8633,7 @@ GameObject:
   - component: {fileID: 1136014452}
   - component: {fileID: 1136014454}
   - component: {fileID: 1136014453}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8705,7 +8705,7 @@ GameObject:
   - component: {fileID: 1143230834}
   - component: {fileID: 1143230836}
   - component: {fileID: 1143230835}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8778,7 +8778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1148564135}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8817,7 +8817,7 @@ GameObject:
   - component: {fileID: 1152875448}
   - component: {fileID: 1152875450}
   - component: {fileID: 1152875449}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8892,7 +8892,7 @@ GameObject:
   - component: {fileID: 1155685036}
   - component: {fileID: 1155685038}
   - component: {fileID: 1155685037}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8964,7 +8964,7 @@ GameObject:
   - component: {fileID: 1156655107}
   - component: {fileID: 1156655109}
   - component: {fileID: 1156655108}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9099,7 +9099,7 @@ GameObject:
   - component: {fileID: 1166420576}
   - component: {fileID: 1166420575}
   - component: {fileID: 1166420574}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9202,7 +9202,7 @@ GameObject:
   - component: {fileID: 1201266343}
   - component: {fileID: 1201266345}
   - component: {fileID: 1201266344}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9336,7 +9336,7 @@ GameObject:
   - component: {fileID: 1204744798}
   - component: {fileID: 1204744800}
   - component: {fileID: 1204744799}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9408,7 +9408,7 @@ GameObject:
   - component: {fileID: 1207421482}
   - component: {fileID: 1207421484}
   - component: {fileID: 1207421483}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9483,7 +9483,7 @@ GameObject:
   - component: {fileID: 1213773671}
   - component: {fileID: 1213773673}
   - component: {fileID: 1213773672}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9618,7 +9618,7 @@ GameObject:
   - component: {fileID: 1214590532}
   - component: {fileID: 1214590531}
   - component: {fileID: 1214590530}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: digit1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9762,7 +9762,7 @@ GameObject:
   - component: {fileID: 1235842672}
   - component: {fileID: 1235842671}
   - component: {fileID: 1235842670}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9865,7 +9865,7 @@ GameObject:
   - component: {fileID: 1237955439}
   - component: {fileID: 1237955441}
   - component: {fileID: 1237955440}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BigBomb6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9940,7 +9940,7 @@ GameObject:
   - component: {fileID: 1255649955}
   - component: {fileID: 1255649957}
   - component: {fileID: 1255649956}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10015,7 +10015,7 @@ GameObject:
   - component: {fileID: 1257719702}
   - component: {fileID: 1257719704}
   - component: {fileID: 1257719703}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10090,7 +10090,7 @@ GameObject:
   - component: {fileID: 1257989464}
   - component: {fileID: 1257989466}
   - component: {fileID: 1257989465}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10165,7 +10165,7 @@ GameObject:
   - component: {fileID: 1258640929}
   - component: {fileID: 1258640931}
   - component: {fileID: 1258640930}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10240,7 +10240,7 @@ GameObject:
   - component: {fileID: 1272879529}
   - component: {fileID: 1272879531}
   - component: {fileID: 1272879530}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BigBomb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10316,7 +10316,7 @@ GameObject:
   - component: {fileID: 1280414572}
   - component: {fileID: 1280414571}
   - component: {fileID: 1280414570}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10418,7 +10418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322288302}
   - component: {fileID: 1322288303}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Top_Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10490,7 +10490,7 @@ GameObject:
   - component: {fileID: 1324033415}
   - component: {fileID: 1324033414}
   - component: {fileID: 1324033413}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10593,7 +10593,7 @@ GameObject:
   - component: {fileID: 1333778122}
   - component: {fileID: 1333778124}
   - component: {fileID: 1333778123}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10666,7 +10666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1337752904}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Progress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10700,7 +10700,7 @@ GameObject:
   - component: {fileID: 1351707153}
   - component: {fileID: 1351707155}
   - component: {fileID: 1351707154}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10835,7 +10835,7 @@ GameObject:
   - component: {fileID: 1368690171}
   - component: {fileID: 1368690170}
   - component: {fileID: 1368690169}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10938,7 +10938,7 @@ GameObject:
   - component: {fileID: 1378153874}
   - component: {fileID: 1378153876}
   - component: {fileID: 1378153875}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11013,7 +11013,7 @@ GameObject:
   - component: {fileID: 1380101624}
   - component: {fileID: 1380101626}
   - component: {fileID: 1380101625}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Live (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11253,7 +11253,7 @@ GameObject:
   - component: {fileID: 1400884852}
   - component: {fileID: 1400884851}
   - component: {fileID: 1400884850}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11356,7 +11356,7 @@ GameObject:
   - component: {fileID: 1408118590}
   - component: {fileID: 1408118592}
   - component: {fileID: 1408118591}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11432,7 +11432,7 @@ GameObject:
   - component: {fileID: 1429116252}
   - component: {fileID: 1429116251}
   - component: {fileID: 1429116250}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11459,11 +11459,12 @@ RectTransform:
   - {fileID: 401429457}
   - {fileID: 1940031114}
   - {fileID: 604334187}
+  - {fileID: 1780007045}
   m_Father: {fileID: 1950956592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 313, y: -58}
+  m_AnchoredPosition: {x: 309, y: -60}
   m_SizeDelta: {x: 479.5, y: 686.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1429116250
@@ -11540,7 +11541,7 @@ GameObject:
   - component: {fileID: 1444405584}
   - component: {fileID: 1444405586}
   - component: {fileID: 1444405585}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11613,7 +11614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1465961743}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11652,7 +11653,7 @@ GameObject:
   - component: {fileID: 1479022011}
   - component: {fileID: 1479022013}
   - component: {fileID: 1479022012}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11724,7 +11725,7 @@ GameObject:
   - component: {fileID: 1479762698}
   - component: {fileID: 1479762700}
   - component: {fileID: 1479762699}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11799,7 +11800,7 @@ GameObject:
   - component: {fileID: 1504182230}
   - component: {fileID: 1504182232}
   - component: {fileID: 1504182231}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11871,7 +11872,7 @@ GameObject:
   - component: {fileID: 1518839938}
   - component: {fileID: 1518839940}
   - component: {fileID: 1518839939}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11946,7 +11947,7 @@ GameObject:
   - component: {fileID: 1536359182}
   - component: {fileID: 1536359184}
   - component: {fileID: 1536359183}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12018,7 +12019,7 @@ GameObject:
   - component: {fileID: 1544306002}
   - component: {fileID: 1544306004}
   - component: {fileID: 1544306003}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12093,7 +12094,7 @@ GameObject:
   - component: {fileID: 1568609631}
   - component: {fileID: 1568609633}
   - component: {fileID: 1568609632}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12227,7 +12228,7 @@ GameObject:
   - component: {fileID: 1574267015}
   - component: {fileID: 1574267017}
   - component: {fileID: 1574267016}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12300,7 +12301,7 @@ GameObject:
   - component: {fileID: 1577516814}
   - component: {fileID: 1577516813}
   - component: {fileID: 1577516812}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12404,7 +12405,7 @@ GameObject:
   - component: {fileID: 1583004145}
   - component: {fileID: 1583004144}
   - component: {fileID: 1583004143}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12507,7 +12508,7 @@ GameObject:
   - component: {fileID: 1587236466}
   - component: {fileID: 1587236468}
   - component: {fileID: 1587236467}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12579,7 +12580,7 @@ GameObject:
   - component: {fileID: 1589629869}
   - component: {fileID: 1589629871}
   - component: {fileID: 1589629870}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12654,7 +12655,7 @@ GameObject:
   - component: {fileID: 1596392921}
   - component: {fileID: 1596392923}
   - component: {fileID: 1596392922}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12729,7 +12730,7 @@ GameObject:
   - component: {fileID: 1597695044}
   - component: {fileID: 1597695046}
   - component: {fileID: 1597695045}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12804,7 +12805,7 @@ GameObject:
   - component: {fileID: 1599322844}
   - component: {fileID: 1599322846}
   - component: {fileID: 1599322845}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12876,7 +12877,7 @@ GameObject:
   - component: {fileID: 1600351184}
   - component: {fileID: 1600351186}
   - component: {fileID: 1600351185}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12952,7 +12953,7 @@ GameObject:
   - component: {fileID: 1600516380}
   - component: {fileID: 1600516379}
   - component: {fileID: 1600516378}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13055,7 +13056,7 @@ GameObject:
   - component: {fileID: 1602149974}
   - component: {fileID: 1602149976}
   - component: {fileID: 1602149975}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13127,7 +13128,7 @@ GameObject:
   - component: {fileID: 1609572944}
   - component: {fileID: 1609572946}
   - component: {fileID: 1609572945}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: ChainProgress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13203,7 +13204,7 @@ GameObject:
   - component: {fileID: 1620481409}
   - component: {fileID: 1620481408}
   - component: {fileID: 1620481407}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13306,7 +13307,7 @@ GameObject:
   - component: {fileID: 1627460762}
   - component: {fileID: 1627460764}
   - component: {fileID: 1627460763}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13440,7 +13441,7 @@ GameObject:
   - component: {fileID: 1666844538}
   - component: {fileID: 1666844540}
   - component: {fileID: 1666844539}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13512,7 +13513,7 @@ GameObject:
   - component: {fileID: 1673813564}
   - component: {fileID: 1673813566}
   - component: {fileID: 1673813565}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: ChainProgress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13587,7 +13588,7 @@ GameObject:
   - component: {fileID: 1678530977}
   - component: {fileID: 1678530979}
   - component: {fileID: 1678530978}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13659,7 +13660,7 @@ GameObject:
   - component: {fileID: 1687652159}
   - component: {fileID: 1687652161}
   - component: {fileID: 1687652160}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BigBomb5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13734,7 +13735,7 @@ GameObject:
   - component: {fileID: 1701836696}
   - component: {fileID: 1701836698}
   - component: {fileID: 1701836697}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13809,7 +13810,7 @@ GameObject:
   - component: {fileID: 1707194311}
   - component: {fileID: 1707194313}
   - component: {fileID: 1707194312}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13884,7 +13885,7 @@ GameObject:
   - component: {fileID: 1713498682}
   - component: {fileID: 1713498684}
   - component: {fileID: 1713498683}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13957,7 +13958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1728072781}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Progress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13991,7 +13992,7 @@ GameObject:
   - component: {fileID: 1735043499}
   - component: {fileID: 1735043501}
   - component: {fileID: 1735043500}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14066,7 +14067,7 @@ GameObject:
   - component: {fileID: 1744025443}
   - component: {fileID: 1744025445}
   - component: {fileID: 1744025444}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14141,7 +14142,7 @@ GameObject:
   - component: {fileID: 1754251212}
   - component: {fileID: 1754251214}
   - component: {fileID: 1754251213}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14217,7 +14218,7 @@ GameObject:
   - component: {fileID: 1763258590}
   - component: {fileID: 1763258589}
   - component: {fileID: 1763258591}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14320,7 +14321,7 @@ GameObject:
   - component: {fileID: 1766539097}
   - component: {fileID: 1766539099}
   - component: {fileID: 1766539098}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14396,7 +14397,7 @@ GameObject:
   - component: {fileID: 1768377894}
   - component: {fileID: 1768377893}
   - component: {fileID: 1768377892}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14499,7 +14500,7 @@ GameObject:
   - component: {fileID: 1768395483}
   - component: {fileID: 1768395485}
   - component: {fileID: 1768395484}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14563,6 +14564,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768395482}
   m_CullTransparentMesh: 1
+--- !u!1 &1780007044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1780007045}
+  - component: {fileID: 1780007047}
+  - component: {fileID: 1780007046}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1780007045
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780007044}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -170.90666}
+  m_LocalScale: {x: 0.67478305, y: 0.67478305, z: 0.67478305}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1429116249}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -114.060814, y: 22.147732}
+  m_SizeDelta: {x: 1440.5, y: 393.09998}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1780007046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780007044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 8400000, guid: 6f39365902797494d8e9e7e4393619b6, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1780007047
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780007044}
+  m_CullTransparentMesh: 1
 --- !u!1 &1821382374
 GameObject:
   m_ObjectHideFlags: 0
@@ -14575,7 +14648,7 @@ GameObject:
   - component: {fileID: 1821382377}
   - component: {fileID: 1821382376}
   - component: {fileID: 1821382378}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14678,7 +14751,7 @@ GameObject:
   - component: {fileID: 1841801237}
   - component: {fileID: 1841801239}
   - component: {fileID: 1841801238}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14701,8 +14774,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 364.55124, y: -240.07266}
-  m_SizeDelta: {x: 655.254, y: 43.1026}
+  m_AnchoredPosition: {x: 360.78857, y: -240.55238}
+  m_SizeDelta: {x: 656.2122, y: 50.6278}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841801238
 MonoBehaviour:
@@ -14751,7 +14824,7 @@ GameObject:
   - component: {fileID: 1847554657}
   - component: {fileID: 1847554656}
   - component: {fileID: 1847554655}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: digit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14894,7 +14967,7 @@ GameObject:
   - component: {fileID: 1877369828}
   - component: {fileID: 1877369830}
   - component: {fileID: 1877369829}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14969,7 +15042,7 @@ GameObject:
   - component: {fileID: 1881489391}
   - component: {fileID: 1881489393}
   - component: {fileID: 1881489392}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15044,7 +15117,7 @@ GameObject:
   - component: {fileID: 1899486086}
   - component: {fileID: 1899486088}
   - component: {fileID: 1899486087}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Live (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15119,7 +15192,7 @@ GameObject:
   - component: {fileID: 1900754507}
   - component: {fileID: 1900754509}
   - component: {fileID: 1900754508}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: LIVES (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15254,7 +15327,7 @@ GameObject:
   - component: {fileID: 1910096513}
   - component: {fileID: 1910096512}
   - component: {fileID: 1910096511}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15357,7 +15430,7 @@ GameObject:
   - component: {fileID: 1925268043}
   - component: {fileID: 1925268045}
   - component: {fileID: 1925268044}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15430,7 +15503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1931258143}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15480,7 +15553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1940031114}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15567,7 +15640,7 @@ Camera:
   m_Depth: -2
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 8200
+    m_Bits: 8232
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -15632,12 +15705,11 @@ Transform:
   m_GameObject: {fileID: 1950956589}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -313, y: 58, z: 0}
+  m_LocalPosition: {x: 235, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1429116249}
-  - {fileID: 1997313598}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1951118111
@@ -15652,7 +15724,7 @@ GameObject:
   - component: {fileID: 1951118115}
   - component: {fileID: 1951118114}
   - component: {fileID: 1951118113}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15755,7 +15827,7 @@ GameObject:
   - component: {fileID: 1951272761}
   - component: {fileID: 1951272763}
   - component: {fileID: 1951272762}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Live (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15830,7 +15902,7 @@ GameObject:
   - component: {fileID: 1977290911}
   - component: {fileID: 1977290913}
   - component: {fileID: 1977290912}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Live
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15905,7 +15977,7 @@ GameObject:
   - component: {fileID: 1977405241}
   - component: {fileID: 1977405243}
   - component: {fileID: 1977405242}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15977,7 +16049,7 @@ GameObject:
   - component: {fileID: 1989624400}
   - component: {fileID: 1989624402}
   - component: {fileID: 1989624401}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Live
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16041,180 +16113,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989624399}
   m_CullTransparentMesh: 1
---- !u!1 &1992390375
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1992390376}
-  - component: {fileID: 1992390378}
-  - component: {fileID: 1992390377}
-  m_Layer: 13
-  m_Name: GamePlay_RawImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1992390376
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992390375}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1997313598}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1992390377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992390375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 6f39365902797494d8e9e7e4393619b6, type: 2}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &1992390378
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992390375}
-  m_CullTransparentMesh: 1
---- !u!1 &1997313597
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1997313598}
-  - component: {fileID: 1997313601}
-  - component: {fileID: 1997313600}
-  - component: {fileID: 1997313599}
-  m_Layer: 3
-  m_Name: DisplayCanvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1997313598
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997313597}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 350}
-  m_LocalScale: {x: 1.8275225, y: 1.8275225, z: 1.8275225}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1992390376}
-  m_Father: {fileID: 1950956592}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920.0001, y: 1080.307}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1997313599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997313597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1997313600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997313597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
---- !u!223 &1997313601
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997313597}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 1950956590}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
 --- !u!1 &2002960926
 GameObject:
   m_ObjectHideFlags: 0
@@ -16226,7 +16124,7 @@ GameObject:
   - component: {fileID: 2002960927}
   - component: {fileID: 2002960929}
   - component: {fileID: 2002960928}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16301,7 +16199,7 @@ GameObject:
   - component: {fileID: 2019311974}
   - component: {fileID: 2019311976}
   - component: {fileID: 2019311975}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BigBomb4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16376,7 +16274,7 @@ GameObject:
   - component: {fileID: 2037471361}
   - component: {fileID: 2037471363}
   - component: {fileID: 2037471362}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: ChainProgress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16451,7 +16349,7 @@ GameObject:
   - component: {fileID: 2039517460}
   - component: {fileID: 2039517462}
   - component: {fileID: 2039517461}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16526,7 +16424,7 @@ GameObject:
   - component: {fileID: 2043160961}
   - component: {fileID: 2043160963}
   - component: {fileID: 2043160962}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: BigBomb5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16602,7 +16500,7 @@ GameObject:
   - component: {fileID: 2055865976}
   - component: {fileID: 2055865975}
   - component: {fileID: 2055865974}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16706,7 +16604,7 @@ GameObject:
   - component: {fileID: 2059767102}
   - component: {fileID: 2059767101}
   - component: {fileID: 2059767100}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16810,7 +16708,7 @@ GameObject:
   - component: {fileID: 2097277921}
   - component: {fileID: 2097277920}
   - component: {fileID: 2097277919}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16913,7 +16811,7 @@ GameObject:
   - component: {fileID: 2098178841}
   - component: {fileID: 2098178843}
   - component: {fileID: 2098178842}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16988,7 +16886,7 @@ GameObject:
   - component: {fileID: 2109379953}
   - component: {fileID: 2109379955}
   - component: {fileID: 2109379954}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: SmallBomb8 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17062,7 +16960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2114214526}
   - component: {fileID: 2114214527}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: StageScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17125,7 +17023,7 @@ GameObject:
   - component: {fileID: 2115823695}
   - component: {fileID: 2115823697}
   - component: {fileID: 2115823696}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Lives (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17198,7 +17096,7 @@ GameObject:
   - component: {fileID: 2145416239}
   - component: {fileID: 2145416238}
   - component: {fileID: 2145416237}
-  m_Layer: 13
+  m_Layer: 5
   m_Name: Digit7
   m_TagString: Untagged
   m_Icon: {fileID: 0}

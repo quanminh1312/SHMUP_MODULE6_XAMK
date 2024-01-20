@@ -693,7 +693,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0000000059226, y: -37}
-  m_SizeDelta: {x: 385.1743, y: 33.721}
+  m_SizeDelta: {x: 968.1599, y: 212.4465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &110766824
 MonoBehaviour:
@@ -742,8 +742,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.3
-  m_fontSizeBase: 18.3
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9976,8 +9976,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000095367, y: 20.934}
-  m_SizeDelta: {x: 708.1419, y: 41.8675}
+  m_AnchoredPosition: {x: -0.00000095367, y: 327.9915}
+  m_SizeDelta: {x: 1779.9597, y: 263.7705}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1330014987
 MonoBehaviour:
@@ -10026,8 +10026,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.9
-  m_fontSizeBase: 42.9
+  m_fontSize: 125.94
+  m_fontSizeBase: 125.94
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11383,7 +11383,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 4
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.49203187, g: 0.43867922, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -11408,13 +11408,13 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 927.6
-  m_Depth: -1
+  orthographic size: 930
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 32
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 6f39365902797494d8e9e7e4393619b6, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -11433,7 +11433,7 @@ Transform:
   m_GameObject: {fileID: 1530665536}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 544, y: -55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12184,10 +12184,10 @@ RectTransform:
   - {fileID: 110766823}
   m_Father: {fileID: 1361507607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1194.4147, y: -865.1348}
+  m_SizeDelta: {x: 1782.6852, y: 1141.311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1613303241
 MonoBehaviour:
