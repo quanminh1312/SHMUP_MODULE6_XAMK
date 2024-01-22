@@ -33,6 +33,19 @@ public class MainMenu : Menu
         TurnOff(false);
         OptionsMenu.instance.TurnOn(this);
     }
+    public void ToHighScoresMenu()
+    {
+        TurnOff(false);
+        ScoresMenu.instance.TurnOn(this);
+    }
+    public void OnLoadButton()
+    {
+        if (SaveManager.instance.LoadExists(1))
+        {
+            TurnOff(false);
+            SaveManager.instance.LoadGame(1);
+        }
+    }
     public void Quit()
     {
         #if UNITY_EDITOR

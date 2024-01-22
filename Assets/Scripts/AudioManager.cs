@@ -37,6 +37,14 @@ public class AudioManager : MonoBehaviour
             return;
         }
         instance = this;
+
+        //restore preferences
+        float volume = PlayerPrefs.GetFloat("MasterVolume", 1);
+        mixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20);
+        volume = PlayerPrefs.GetFloat("EffectVolume", 1);
+        mixer.SetFloat("EffectVolume", Mathf.Log10(volume) * 20);
+        volume = PlayerPrefs.GetFloat("MusicVolume", 1);
+        mixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
     }
 
     public void PlayMusic(Track track, bool fade, float fadeDuration)
@@ -91,6 +99,16 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
+    }
+    public void PauseMusic()
+    {
+        musicSource1.Pause();
+        musicSource2.Pause();
+    }
+    public void ResumeMusic()
+    {
+        musicSource1.UnPause();
+        musicSource2.UnPause();
     }
     IEnumerator Fade(int sourceIndex, float duration, float startVolume, float targetVolume)
     {

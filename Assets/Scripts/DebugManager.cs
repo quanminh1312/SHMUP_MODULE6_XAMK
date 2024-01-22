@@ -7,7 +7,7 @@ public class DebugManager : MonoBehaviour
 {
     public static DebugManager instance = null;
 
-    private bool displaying = false;
+    public bool displaying = false;
     public GameObject Root = null;
 
     public Toggle invincibleToggle = null;

@@ -15,6 +15,7 @@ public class GameInitializer : MonoBehaviour
     private bool menuLoaded = false;
     private Scene displayScrene;
 
+    public int stageNumber = 0;
     public AudioManager.Track playMusicTrack = AudioManager.Track.None;
     private void Awake()
     {
@@ -41,9 +42,12 @@ public class GameInitializer : MonoBehaviour
             {
                 case GameMode.Menus:
                     MenuManager.instance.SwitchToMainMenuMenus();
+                    GameManager.Instance.gameState = GameManager.GameState.InMenus;
                     break;
                 case GameMode.GamePlay:
                     MenuManager.instance.SwitchToGameplayMenus();
+                    GameManager.Instance.gameState = GameManager.GameState.Playing;
+                    GameManager.Instance.gameSession.stage = stageNumber;
                     break;
             }
 
@@ -53,7 +57,10 @@ public class GameInitializer : MonoBehaviour
             }
 
             if (gameMode == GameMode.GamePlay)
+            {
+                SaveManager.instance.SaveGame(0); // 0 = autosave at beginning of state
                 GameManager.Instance.SpawnPlayers();
+            }
 
             menuLoaded = true;
         }

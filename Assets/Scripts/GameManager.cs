@@ -105,9 +105,9 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!playerCrafts[0]) SpawnPlayer(0, 0);
+            TogglePause();
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -124,16 +124,6 @@ public class GameManager : MonoBehaviour
             if (playerCrafts[0])
                 playerCrafts[0].IncreaseBeamStrenght(0);
         }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            EnemyPattern testPattern = GameObject.FindObjectOfType<EnemyPattern>();
-            testPattern.Spawn();
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            if (bulletManager) bulletManager.SpawnBullet(BulletManager.BulletType.bullet1_Size1, 0, 150
-                                                        , Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0, 0, false, 0);
-        }
         if (Input.GetKeyDown(KeyCode.BackQuote))
         {
             DebugManager.instance.ToggleHUD();
@@ -145,6 +135,27 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             AudioManager.instance.PlayMusic(AudioManager.Track.Boss1, true, 2f);
+        }
+    }
+    public void TogglePause()
+    {
+        if (gameState == GameState.Playing) // pause the game
+        {
+            gameState = GameState.Paused;
+            AudioManager.instance.PauseMusic();
+            PauseMenu.instance.TurnOn(null);
+            if (DebugManager.instance.displaying)
+            {
+                DebugManager.instance.ToggleHUD();
+            }
+            Time.timeScale = 0;
+        }
+        else // unpaused
+        {
+            gameState = GameState.Playing;
+            AudioManager.instance.ResumeMusic();
+            PauseMenu.instance.TurnOff(false);
+            Time.timeScale = 1;
         }
     }
     public void PickUpFallOffScreen(PickUp pickUp)
@@ -187,5 +198,18 @@ public class GameManager : MonoBehaviour
         playerDatas[0].score = 0;
         playerDatas[1].score = 0;
         UnityEngine.SceneManagement.SceneManager.LoadScene("Stage01");
+    }
+    public void resumeGameFromLoad()
+    {
+        gameState = GameState.Playing;
+        switch(gameSession.stage)
+        {
+            case 1:
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Stage01");
+                break;
+            case 2:
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Stage02");
+                break;
+        }
     }
 } 

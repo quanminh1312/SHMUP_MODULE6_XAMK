@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 5c43f8816eb974246bfb7a0439935c4b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,6 +114,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 7932436089443744917}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 1
+  smallExplosion: 0
 --- !u!61 &6748577395439186641
 BoxCollider2D:
   m_ObjectHideFlags: 0

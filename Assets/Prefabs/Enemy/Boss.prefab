@@ -43,7 +43,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 4
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -4989,6 +4989,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 0}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 0
+  smallExplosion: 1
 --- !u!58 &2062477504136247140
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5067,7 +5069,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 4
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -9961,7 +9963,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 4
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -15005,6 +15007,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 0}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 1
+  smallExplosion: 0
 --- !u!1 &1270773117331276942
 GameObject:
   m_ObjectHideFlags: 0
@@ -15048,7 +15052,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 4
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -19995,6 +19999,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 0}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 0
+  smallExplosion: 1
 --- !u!58 &723423199170433596
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20206,6 +20212,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 0}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 0
+  smallExplosion: 1
 --- !u!58 &6861761753332206104
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -20412,7 +20420,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 4
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -25447,6 +25455,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 0}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 1
+  smallExplosion: 0
 --- !u!60 &6917994611496874734
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -25664,6 +25674,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 0}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 0
+  smallExplosion: 1
 --- !u!60 &7731787663571670338
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -25824,7 +25836,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 4
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -30996,7 +31008,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 4
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -36531,7 +36543,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 4
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -41567,6 +41579,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 0}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 0
+  smallExplosion: 1
 --- !u!1 &6410625631463177435
 GameObject:
   m_ObjectHideFlags: 0
@@ -41610,7 +41624,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 4
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -46556,6 +46570,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 0}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 0
+  smallExplosion: 1
 --- !u!60 &6116307528845904954
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -46805,6 +46821,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 0}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 0
+  smallExplosion: 1
 --- !u!58 &3879343155259711854
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -46989,7 +47007,7 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 4
   simulationSpeed: 1
-  stopAction: 0
+  stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
@@ -51935,6 +51953,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 0}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 1
+  smallExplosion: 0
 --- !u!60 &5507759095043789005
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -52066,7 +52086,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5397801a0f906af4883e2afbf50f0280, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -52202,6 +52222,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 0}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 0
+  smallExplosion: 1
 --- !u!1 &8875700020237864147
 GameObject:
   m_ObjectHideFlags: 0

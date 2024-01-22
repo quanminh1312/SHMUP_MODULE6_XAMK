@@ -22,6 +22,11 @@ public class OptionsMenu : Menu
         TurnOff(false); 
         ControlSettingMenu.instance.TurnOn(this);
     }
+    public void ToAudioSettingsMenu()
+    {
+        TurnOff(false);
+        AudioOptionsMenu.instance.TurnOn(this);
+    }
     public void ToPreviousMenu()
     {
         TurnOff(true);

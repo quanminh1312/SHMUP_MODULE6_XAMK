@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6755414028331805074}
   - component: {fileID: 902933305607642242}
   - component: {fileID: 1534335724789456785}
+  - component: {fileID: 684459245451065024}
   - component: {fileID: 7658872953165187035}
   - component: {fileID: 6623621313670602774}
   - component: {fileID: 741260694970824755}
@@ -172,6 +173,9 @@ MonoBehaviour:
   craftExplosionPrefab: {fileID: 8118052834267376584, guid: 3b7254713c04ca3419768c8c3b8d63fc, type: 3}
   craftDebrisPrefab: {fileID: 699639382823390594, guid: 133d9a97dcdaee247af92fce9cf773f7, type: 3}
   craftParticlesPrefab: {fileID: 699639382823390594, guid: b883c08172207f64687f48afba20de25, type: 3}
+  HitParticleSystem: {fileID: 6793309272688347029, guid: 94197eaa0ca69ab4ab242099a88707f8, type: 3}
+  largeExplosion: {fileID: 5876988477514083898, guid: 70afdabf92eacb1409c8be60be8dd1af, type: 3}
+  smallExplosion: {fileID: 5876988477514083898, guid: 5acd726e54411cc4ab966443c8a48dd9, type: 3}
 --- !u!114 &6755414028331805074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +256,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8060626e9a32ee24ea53ae129d47d9e1, type: 3}
   - {fileID: 8300000, guid: 09cdd47698a24e745b0118d85bd50ac9, type: 3}
   - {fileID: 8300000, guid: e53b961636407644d853aef98e882752, type: 3}
+--- !u!114 &684459245451065024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947249443713221648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd54e96dbd9362f41afa47de221379a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &7658872953165187035
 AudioSource:
   m_ObjectHideFlags: 0

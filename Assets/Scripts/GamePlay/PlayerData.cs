@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 [Serializable]
@@ -15,4 +16,15 @@ public class PlayerData
     public const int MAX_CHAIN = 200;
 
     //todo add other playthourgh stats
+
+    public void Save(BinaryWriter writer)
+    {
+        writer.Write(score);
+        writer.Write(lives);
+    }
+    public void Load(BinaryReader reader)
+    {
+        score = reader.ReadInt32();
+        lives = reader.ReadByte();
+    }
 }

@@ -34,6 +34,15 @@ public class Shootable : MonoBehaviour
 
     public int hitScore = 10;
     public int destroyScore = 1000;
+
+    
+    private bool flashing = false;
+    private float flashTimer = 0;
+    private SpriteRenderer spriteRenderer = null;
+
+    public bool largeExplosion = false;
+    public bool smallExplosion = false;
+
     private void Start()
     {
         layerMask = ~LayerMask.GetMask("Enemy") & ~LayerMask.GetMask("EnemyBullets") & ~LayerMask.GetMask("GroundEnemy") ;
@@ -44,19 +53,32 @@ public class Shootable : MonoBehaviour
         }
         else
             halfExtent = new Vector3(radiousOrWidth/2, heigth/2,0);
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void FixedUpdate()
     {
         if (destroyed) return;
+        if (flashing)
+        {
+            flashTimer -= Time.deltaTime;
+            if (flashTimer <= 0)
+            {
+                spriteRenderer.material.SetColor("_OverBright",Color.black);
+                flashing = false;
+            }
+        }
         int maxColliders = 10;
         Collider2D[] hits = new Collider2D[maxColliders];
         int noOfHits = 0;
         if (box)
-            noOfHits = Physics2D.OverlapBoxNonAlloc(transform.position, 
+        {
+            float angle = transform.eulerAngles.z;
+            noOfHits = Physics2D.OverlapBoxNonAlloc(transform.position,
                                                     halfExtent,
-                                                    0, //transfrom.rotation,
-                                                    hits, 
+                                                    angle,
+                                                    hits,
                                                     layerMask);
+        }
         else if (polygon)
         {
             ContactFilter2D contactFilter = new ContactFilter2D();
@@ -78,6 +100,7 @@ public class Shootable : MonoBehaviour
                     {
                         takeDamage(1,b.playerIndex);
                         GameManager.Instance.bulletManager.DeActivateBullet(b.index);
+                        FlashAndSparks(b.transform.position);
                     }
                 }
                 if (damagedByBombs)
@@ -86,10 +109,22 @@ public class Shootable : MonoBehaviour
                     if (bomb != null)
                     {
                         takeDamage(bomb.power,bomb.playerIndex);
+                        FlashAndSparks(transform.position);
                     }
                 }
             }
         }
+    }
+
+    private void FlashAndSparks(Vector3 position)
+    {
+        EffectSystem.instance.SpawnSparks(position);
+
+
+        if (flashing) return;
+        flashing = true;
+        flashTimer = 0.01f;
+        spriteRenderer.material.SetColor("_OverBright", Color.white);
     }
     public void takeDamage(int damage, int fromPlayer)
     {
@@ -131,6 +166,12 @@ public class Shootable : MonoBehaviour
             {
                 GameManager.Instance.SpawnPickUp(p, pos);
             }
+
+            if (smallExplosion)
+                EffectSystem.instance.SpawnSmallExplosion(transform.position);
+            else if (largeExplosion)
+                EffectSystem.instance.SpawnLargeExplosion(transform.position);
+
 
             if (remainDestroy)
                 destroyed = true;

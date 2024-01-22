@@ -596,7 +596,6 @@ GameObject:
   - component: {fileID: 190761195}
   - component: {fileID: 190761194}
   - component: {fileID: 190761193}
-  - component: {fileID: 190761192}
   m_Layer: 15
   m_Name: Quad
   m_TagString: Untagged
@@ -604,28 +603,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &190761192
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 190761191}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &190761193
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -49636,7 +49613,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMode: 2
   gameManagerPrefab: {fileID: 2947249443713221648, guid: 5a7c615f933d31b46b21dddc2bd6f484, type: 3}
-  playMusicTrack: 0
+  stageNumber: 2
+  playMusicTrack: 1
 --- !u!4 &1396695091
 Transform:
   m_ObjectHideFlags: 0
@@ -51552,7 +51530,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: -1953359640, guid: ef85525fd3d6f7f4d91223b7e0e3b411, type: 3}
   m_Color: {r: 0.28746885, g: 0.34112877, b: 0.6415094, a: 1}
   m_FlipX: 0
@@ -52825,7 +52803,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: -1953359640, guid: ef85525fd3d6f7f4d91223b7e0e3b411, type: 3}
   m_Color: {r: 0.28746885, g: 0.34112877, b: 0.6415094, a: 1}
   m_FlipX: 0

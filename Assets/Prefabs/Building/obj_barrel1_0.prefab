@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 02e63a9ea65c8224d956b0d1c42f0577, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,6 +114,8 @@ MonoBehaviour:
   destroyedSound: {fileID: 7348467987144924264}
   hitScore: 10
   destroyScore: 1000
+  largeExplosion: 0
+  smallExplosion: 1
 --- !u!58 &5593858365503365860
 CircleCollider2D:
   m_ObjectHideFlags: 0

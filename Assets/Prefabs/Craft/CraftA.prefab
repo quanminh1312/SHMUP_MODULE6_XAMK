@@ -2834,7 +2834,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 935734184, guid: c87878188a9da834aacaff3cae56011a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2879,6 +2879,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa7c7804c951594db410dd7270d5434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flame1: {fileID: 3474539834633692555}
+  flame2: {fileID: 8233503018521525025}
+  miniflame1: {fileID: 8984446745087222522}
+  miniflame2: {fileID: 3724971646251251696}
+  config: {fileID: 11400000, guid: b6686311c97d0d04a86bb684d93cb06a, type: 2}
+  playerIndex: 0
   craftData:
     positionX: 0
     positionY: 0
@@ -2891,12 +2897,6 @@ MonoBehaviour:
     beamTimer: 0
     smallBombs: 1
     largeBombs: 1
-  flame1: {fileID: 3474539834633692555}
-  flame2: {fileID: 8233503018521525025}
-  miniflame1: {fileID: 8984446745087222522}
-  miniflame2: {fileID: 3724971646251251696}
-  config: {fileID: 11400000, guid: b6686311c97d0d04a86bb684d93cb06a, type: 2}
-  playerIndex: 0
   bulletSpawner:
   - {fileID: 4980559431013946738}
   - {fileID: 1698374394642721739}
@@ -3191,7 +3191,7 @@ Transform:
   m_GameObject: {fileID: 7740474051200671687}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 14.4, z: 50}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 2.170045, y: 2.170045, z: 2.170045}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3238,7 +3238,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 200, z: 1}
@@ -3346,7 +3346,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 199.85716
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

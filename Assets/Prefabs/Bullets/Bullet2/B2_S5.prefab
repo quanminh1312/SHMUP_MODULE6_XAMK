@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da534848c174d549868148b18222b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 3
   radiousOrWidth: 11
   heigth: 33
   box: 1
@@ -125,6 +125,11 @@ MonoBehaviour:
   damagedByBeam: 1
   spawnCyclicPickUp: 0
   spawnSpecificPickUp: []
+  destroyedSound: {fileID: 0}
+  hitScore: 10
+  destroyScore: 1000
+  largeExplosion: 0
+  smallExplosion: 0
 --- !u!61 &1413368616960402610
 BoxCollider2D:
   m_ObjectHideFlags: 0

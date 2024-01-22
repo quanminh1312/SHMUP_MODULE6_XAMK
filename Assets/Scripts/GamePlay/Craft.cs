@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class Craft : MonoBehaviour
@@ -454,4 +455,25 @@ public class CraftData
 
     public int smallBombs;
     public int largeBombs;
+
+    public void Save(BinaryWriter writer)
+    {
+        writer.Write(shotPower);
+        writer.Write(noOfEnableOptions);
+        writer.Write(optionsLayout);
+        writer.Write(beamPower);
+        writer.Write(beamCharge);
+        writer.Write(smallBombs);
+        writer.Write(largeBombs);
+    }
+    public void Load(BinaryReader reader)
+    {
+        shotPower = reader.ReadInt32();
+        noOfEnableOptions = reader.ReadInt32();
+        optionsLayout = reader.ReadInt32();
+        beamPower = reader.ReadInt32();
+        beamCharge = reader.ReadInt32();
+        smallBombs = reader.ReadInt32();
+        largeBombs = reader.ReadInt32();
+    }
 }

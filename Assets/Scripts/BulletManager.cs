@@ -93,9 +93,24 @@ public class BulletManager : MonoBehaviour
 
         Bullet result = bullets[index];
         result.playerIndex = playerIndex;
-        result.gameObject.SetActive(true);
         bulletData[index] = new BulletData(x, y, dx, dy, angle,dAngle, (int)bulletType, true,homing);
         bullets[index].gameObject.transform.position = new Vector3(x, y, 0);
+        result.gameObject.SetActive(true);
+
+
+        SpriteRenderer renderer = bullets[index].gameObject.GetComponent<SpriteRenderer>();
+        if (renderer) // color bullet
+        {
+            //if (playerIndex == 0)
+            //    renderer.color = new Color(0, 0.5f, 1, 1);
+            //else if (playerIndex == 1)
+            //    renderer.color = new Color(1, 1, 0, 1);
+            //else if (playerIndex == 2)
+            //    renderer.color = new Color(1, 0, 1, 1);
+        }
+
+
+
         return result;
     }
     private void FixedUpdate()
