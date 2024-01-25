@@ -74,6 +74,11 @@ public class Enemy : MonoBehaviour
     public void TimeOutDestruct()
     {
         Destroy(gameObject);
+
+        if (isBoss)
+        {
+            GameManager.Instance.NextStage();
+        }
     }
     public void OutOfBound()
     {
@@ -125,6 +130,11 @@ public class Enemy : MonoBehaviour
             owingWave.EnemyDestroyed(transform.position, playerIndex);
         }
         Destroy(gameObject);
+
+        if (isBoss)
+        {
+            GameManager.Instance.NextStage();
+        }
     }
 }
 

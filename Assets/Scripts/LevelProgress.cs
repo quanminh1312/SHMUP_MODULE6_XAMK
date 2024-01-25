@@ -14,6 +14,7 @@ public class LevelProgress : MonoBehaviour
     public float midGroundRate = 0.75f;
 
     private Craft playerOneCraft = null;
+    private Craft playerTwoCraft = null;
 
     private float ratio;
     // Start is called before the first frame update
@@ -34,13 +35,16 @@ public class LevelProgress : MonoBehaviour
     {
         if (data.progress < levelSize)
         {
-            float movement = speedCurve.Evaluate(ratio);
-            data.progress = (int)(data.positionY + movement);
-
             if (playerOneCraft==null)
-                playerOneCraft = GameManager.Instance.playerCrafts[0];//error
-            if (playerOneCraft)
-                UpdateProgressWindow(playerOneCraft.craftData.positionX,movement);
+                playerOneCraft = GameManager.Instance.playerCrafts[0];
+            if (playerTwoCraft == null)
+                playerTwoCraft = GameManager.Instance.playerCrafts[1];
+            if (playerOneCraft || playerTwoCraft)
+            {
+                float movement = speedCurve.Evaluate(ratio);
+                data.progress = (int)(data.positionY + movement);
+                UpdateProgressWindow(playerOneCraft.craftData.positionX, movement);
+            }
         }
     }
     void UpdateProgressWindow(float shipX,float movement)

@@ -163,4 +163,8 @@ public class ScoreManager : MonoBehaviour
             Debug.LogWarning("Couldn't load scores: " + e.Message);
         }
     }
+    public int TopScore(int hardness)
+    {
+        return scores[0, hardness];
+    }
 }

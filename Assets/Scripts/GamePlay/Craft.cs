@@ -75,7 +75,8 @@ public class Craft : MonoBehaviour
     }
     private void FixedUpdate()
     {
-
+        if (GameManager.Instance.playerDatas[playerIndex].lives > MAXLIVES)
+            GameManager.Instance.playerDatas[playerIndex].lives = MAXLIVES;
         if (invunerable)
         {
             if (invunerableTimer % 12 < 6)
@@ -240,7 +241,7 @@ public class Craft : MonoBehaviour
     }
     public void Hit()
     {
-        if (!invunerable && !GameManager.Instance.gameSession.invincible)
+        if (!invunerable && !GameManager.Instance.gameSession.invincible && alive)
         {
             Explode();
         }
@@ -285,7 +286,7 @@ public class Craft : MonoBehaviour
     public void Explode()
     {
         alive = false;
-        GameManager.Instance.playerDatas[playerIndex].lives--;
+        GameManager.Instance.playerDatas[playerIndex].lives-=1;
         StartCoroutine(Exploding());
 
         if (explodingNoise)
@@ -307,8 +308,21 @@ public class Craft : MonoBehaviour
         Destroy(gameObject);
         GameManager.Instance.playerCrafts[playerIndex] = null;
 
-        if (GameManager.Instance.playerDatas[playerIndex].lives == 0)
+        bool allLivesDone = false;
+        if (GameManager.Instance.twoPlayer)
         {
+            if (GameManager.Instance.playerDatas[0].lives == 0 && GameManager.Instance.playerDatas[1].lives == 0)
+                allLivesDone = true;
+        }
+        else
+        {
+            if (GameManager.Instance.playerDatas[0].lives == 0)
+                allLivesDone = true;
+        }
+
+        if (allLivesDone)
+        {
+            //AudioManager.instance.PauseMusic();
             GameOverMenu.instance.GameOver();
         }
         else
@@ -335,8 +349,8 @@ public class Craft : MonoBehaviour
                 PickUp pickUp = GameManager.Instance.SpawnPickUp(GameManager.Instance.beamUp, transform.position);
                 pickUp.transform.position += new Vector3(UnityEngine.Random.Range(-128, 128), UnityEngine.Random.Range(-128, 128), 0);
             }
-
-            GameManager.Instance.DelayedRespawn(playerIndex);
+            if (GameManager.Instance.playerDatas[playerIndex].lives > 0)
+                GameManager.Instance.DelayedRespawn(playerIndex);
         }
 
         yield return null;
@@ -416,10 +430,10 @@ public class Craft : MonoBehaviour
     public void OneUp(int surplusValue)
     {
         GameManager.Instance.playerDatas[playerIndex].lives++;
-        if (GameManager.Instance.playerDatas[playerIndex].lives > (byte)MAXLIVES)
+        if (GameManager.Instance.playerDatas[playerIndex].lives > MAXLIVES)
         {
             ScoreManager.instance.PickUpCollected(playerIndex, surplusValue);
-            GameManager.Instance.playerDatas[playerIndex].lives = (byte)MAXLIVES;
+            GameManager.Instance.playerDatas[playerIndex].lives = MAXLIVES;
         }
     }
     public void AddMedal(int value, int level)

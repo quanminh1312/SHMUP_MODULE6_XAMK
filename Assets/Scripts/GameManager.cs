@@ -57,13 +57,19 @@ public class GameManager : MonoBehaviour
     {
         Debug.Assert(craftType < craftPrefabs.Length);
         Debug.Log("Spawning player " + playerIndex);
-        playerCrafts[playerIndex] = Instantiate(craftPrefabs[craftType]).GetComponent<Craft>();
+        int whichPrefab = playerIndex;//todo on the craft select menu, this is the selected ship
+        playerCrafts[playerIndex] = Instantiate(craftPrefabs[whichPrefab]).GetComponent<Craft>();
         playerCrafts[playerIndex].playerIndex = playerIndex;
+        if (Instance.twoPlayer)
+            if (playerIndex == 0)
+                gameSession.craftDatas[playerIndex].positionX = -50;
+            else
+                gameSession.craftDatas[playerIndex].positionX = 50;
     }
     public void SpawnPlayers()
     {
         SpawnPlayer(0, 0); //todo craft type
-        if (twoPlayer) SpawnPlayer(1, 0);
+        if (twoPlayer) SpawnPlayer(1, 1);
     }
 
     public void DelayedRespawn(int playerIndex)
@@ -195,8 +201,8 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Playing;
         ResetState(0);
         if (twoPlayer) ResetState(1);
-        playerDatas[0].score = 0;
-        playerDatas[1].score = 0;
+        playerDatas[0].ResetData();
+        playerDatas[1].ResetData();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Stage01");
     }
     public void resumeGameFromLoad()
@@ -211,5 +217,19 @@ public class GameManager : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Stage02");
                 break;
         }
+    }
+    public void NextStage()
+    {
+        HUD.Instance.FadeOutScreen();
+        if (gameSession.stage == 1)
+        {
+            gameSession.stage = 2;
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Stage02");
+        }
+        else if (gameSession.stage == 2)
+        {
+            WellDoneMenu.instance.TurnOn(null);
+        }
+        HUD.Instance.FadeInScreen();
     }
 } 

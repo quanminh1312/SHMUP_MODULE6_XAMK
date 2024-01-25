@@ -53,4 +53,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stages/Stage02.unity
     guid: b397c4a1aefc2ac489c3c6b3fbd5ffe4
+  - enabled: 1
+    path: Assets/Scenes/Menus/KeyPadMenu.unity
+    guid: e2b6f244e5677f242a800064b9efb8bb
+  - enabled: 1
+    path: Assets/Scenes/Menus/GraphicsOptionsMenu.unity
+    guid: 44b39236815a0944fa74904d0d13aa4f
+  - enabled: 1
+    path: Assets/Scenes/Menus/WellDoneMenu.unity
+    guid: 573002c106163ab4dbf8158e089433ce
   m_configObjects: {}

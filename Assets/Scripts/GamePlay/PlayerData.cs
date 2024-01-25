@@ -9,7 +9,7 @@ public class PlayerData
 {
     public int score = 0;
     public int stageScore = 0;
-    public byte lives = 3;
+    public int lives = 3;
 
     public int chain = 0;
     public byte chainTimer = 0;
@@ -26,5 +26,14 @@ public class PlayerData
     {
         score = reader.ReadInt32();
         lives = reader.ReadByte();
+    }
+
+    internal void ResetData()
+    {
+        score = 0;
+        lives = 3;
+        chain = 0;
+        chainTimer = 0;
+        stageScore = 0;
     }
 }

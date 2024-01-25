@@ -751,7 +751,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMode: 1
   gameManagerPrefab: {fileID: 2947249443713221648, guid: 5a7c615f933d31b46b21dddc2bd6f484, type: 3}
-  playMusicTrack: 7
+  stageNumber: 0
+  playMusicTrack: 6
 --- !u!4 &1519741690
 Transform:
   m_ObjectHideFlags: 0
@@ -977,7 +978,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Nguy\u1EC5n Minh Qu\xE2n"
+  m_text: Nguyen Minh Quan
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

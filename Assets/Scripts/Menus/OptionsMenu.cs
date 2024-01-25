@@ -27,6 +27,11 @@ public class OptionsMenu : Menu
         TurnOff(false);
         AudioOptionsMenu.instance.TurnOn(this);
     }
+    public void ToGraphicsSettingsMenu()
+    {
+        TurnOff(false);
+        GraphicsOptionMenu.Instance.TurnOn(this);
+    }
     public void ToPreviousMenu()
     {
         TurnOff(true);

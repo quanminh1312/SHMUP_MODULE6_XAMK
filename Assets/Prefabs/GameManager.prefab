@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 902933305607642242}
   - component: {fileID: 1534335724789456785}
   - component: {fileID: 684459245451065024}
+  - component: {fileID: 5981610849460346589}
   - component: {fileID: 7658872953165187035}
   - component: {fileID: 6623621313670602774}
   - component: {fileID: 741260694970824755}
@@ -58,6 +59,7 @@ MonoBehaviour:
   twoPlayer: 0
   craftPrefabs:
   - {fileID: 6694826761253787749, guid: e4a12a3254a33c841af97c80cf763827, type: 3}
+  - {fileID: 6694826761253787749, guid: b65bee9065fdc7741a09b4415ddfedc7, type: 3}
   playerCrafts:
   - {fileID: 0}
   - {fileID: 0}
@@ -268,6 +270,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd54e96dbd9362f41afa47de221379a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5981610849460346589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947249443713221648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d205d961e79404981cde67beabb4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullscreen: 1
 --- !u!82 &7658872953165187035
 AudioSource:
   m_ObjectHideFlags: 0

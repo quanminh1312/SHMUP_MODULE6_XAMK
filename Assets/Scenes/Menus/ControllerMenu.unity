@@ -425,6 +425,7 @@ GameObject:
   - component: {fileID: 1143695756}
   - component: {fileID: 1143695755}
   - component: {fileID: 1143695754}
+  - component: {fileID: 1143695757}
   m_Layer: 5
   m_Name: PressFireButton
   m_TagString: Untagged
@@ -534,6 +535,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143695752}
   m_CullTransparentMesh: 1
+--- !u!114 &1143695757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143695752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847777845f35d314da5d6e296bff21db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectSound: {fileID: 8300000, guid: c9f70bb69367ef74ab98be52e90d2f6c, type: 3}
+  submitSound: {fileID: 8300000, guid: b5c9ca9ca318fc6488afc30733928872, type: 3}
 --- !u!1 &1530665536
 GameObject:
   m_ObjectHideFlags: 0

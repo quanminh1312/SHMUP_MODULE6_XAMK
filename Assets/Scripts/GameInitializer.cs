@@ -12,7 +12,7 @@ public class GameInitializer : MonoBehaviour
     }
     public GameMode gameMode;
     public GameObject gameManagerPrefab = null;
-    private bool menuLoaded = false;
+    private bool initialised = false;
     private Scene displayScrene;
 
     public int stageNumber = 0;
@@ -32,8 +32,9 @@ public class GameInitializer : MonoBehaviour
     }
     private void Update()
     {
-        if (!menuLoaded)
+        if (!initialised)
         {
+            if (gameMode == GameMode.INVALID) return;
             if (!displayScrene.isLoaded)
             {
                 SceneManager.LoadScene("DisplayScene", LoadSceneMode.Additive);
@@ -62,7 +63,7 @@ public class GameInitializer : MonoBehaviour
                 GameManager.Instance.SpawnPlayers();
             }
 
-            menuLoaded = true;
+            initialised = true;
         }
     }
 }

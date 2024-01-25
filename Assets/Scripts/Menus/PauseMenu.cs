@@ -27,6 +27,7 @@ public class PauseMenu : Menu
     }
     public void OnLoadButton()
     {
+        Time.timeScale = 1;
         if (SaveManager.instance.LoadExists(1))
         {
             SaveManager.instance.LoadGame(1);
@@ -39,6 +40,7 @@ public class PauseMenu : Menu
     }
     public void OnMainMenuButton()
     {
+        Time.timeScale = 1;
         TurnOff(false);
         SceneManager.LoadScene("MainMenuScene");
     }

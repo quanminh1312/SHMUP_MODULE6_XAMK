@@ -66,15 +66,14 @@ public class AudioManager : MonoBehaviour
                 }
             }
             musicSource1.clip = musicTracks[(int)track];
-            musicSource1.Play();
-            activeMusicSource = 1;
-
+            StartCoroutine(DelayPlayMusic(1));
             if (fade)
             {
                 StartCoroutine(Fade(1,fadeDuration,0,1));
                 if (activeMusicSource ==2)
                     StartCoroutine(Fade(2, fadeDuration, 1, 0));
             }
+            activeMusicSource = 1;
 
         }
         else if (activeMusicSource == 1)
@@ -86,7 +85,7 @@ public class AudioManager : MonoBehaviour
                 musicSource1.Stop();
             }
             musicSource2.clip = musicTracks[(int)track];
-            musicSource2.Play();
+            StartCoroutine(DelayPlayMusic(2));
             activeMusicSource = 2;
             if (fade)
             {
@@ -95,6 +94,14 @@ public class AudioManager : MonoBehaviour
             }
 
         }
+    }
+    IEnumerator DelayPlayMusic(int sourceNo)
+    {
+        yield return null;
+        if (sourceNo == 1)
+            musicSource1.Play();
+        else if (sourceNo == 2)
+            musicSource2.Play();
     }
     public void PlaySFX(AudioClip clip)
     {
@@ -115,7 +122,7 @@ public class AudioManager : MonoBehaviour
         float timer = 0;
         while(timer < duration)
         {
-            timer += Time.deltaTime;
+            timer += Time.unscaledDeltaTime;
 
             float newVol = Mathf.Lerp(startVolume, targetVolume, timer / duration);
             newVol = Mathf.Clamp(newVol, 0.0001f, 0.9999f);

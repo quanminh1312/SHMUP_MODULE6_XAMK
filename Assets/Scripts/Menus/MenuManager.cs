@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     public static MenuManager instance = null;
     internal  Menu ActiveMenu = null;
+    private bool titleMenuShown = false;
     private void Start()
     {
         if (instance)
@@ -28,12 +29,14 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("GameOverMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("AudioOptionsMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("HighScoresMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("KeyPadMenu",LoadSceneMode.Additive);
         SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("GraphicsOptionsMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("WellDoneMenu", LoadSceneMode.Additive);
     }
     public void SwitchToMainMenuMenus()
     {
         SceneManager.LoadScene("MainMenu",LoadSceneMode.Additive);
-        SceneManager.LoadScene("TitleScreenMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("ControllerMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("OptionsMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("ControlSettingsMenu", LoadSceneMode.Additive);
@@ -41,6 +44,24 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("GameOverMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("AudioOptionsMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("HighScoresMenu", LoadSceneMode.Additive);
-        SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("KeyPadMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("GraphicsOptionsMenu", LoadSceneMode.Additive);
+        if (!titleMenuShown)
+        {
+            SceneManager.LoadScene("TitleScreenMenu", LoadSceneMode.Additive);
+            titleMenuShown = true;
+        }
+        else
+        {
+            StartCoroutine(ShowMainMenu());
+        }
+    }
+    IEnumerator ShowMainMenu()
+    {
+        while (MainMenu.instance == null)
+        {
+            yield return null;
+        }
+        MainMenu.instance.TurnOn(null);
     }
 }
